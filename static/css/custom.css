@@ -1,0 +1,88 @@
+pre {
+  margin: 7px;
+}
+
+.remark-code {
+  font-family: "monospace";
+  font-size: 14px;
+}
+
+.remark-inline-code {
+  font-family: "monospace";
+}
+
+.remark-code {
+  padding: 1em !important;
+  border-radius: 10px;
+  background-color: #9c9e9f !important;
+  word-wrap: break-word;
+}
+
+.clignote {
+  animation: clignote 2s linear infinite;
+}
+
+@keyframes clignote {
+  50% {
+    opacity: 0;
+  }
+}
+
+.align_left {
+  text-align: start;
+}
+
+.align_right {
+  text-align: end;
+}
+
+.cols {
+  display: flex;
+  justify-content: space-between;
+}
+
+.thirty {
+  flex: 30%;
+}
+
+.fourty {
+  /* flex: 40%; */
+  width: 40%;
+}
+
+.fifty {
+  width: 47%;
+}
+
+.sixty {
+  flex: 60%;
+}
+
+.thirty_five {
+  flex: 35%;
+}
+
+.sixty_five {
+  flex: 65%;
+}
+
+.x-video.embed.with-container {
+  border: none;
+  box-shadow: none;
+}
+
+iframe {
+  border-width: 0;
+}
+
+p.legend {
+  font-size: small;
+  text-align: center;
+  margin: 0;
+}
+
+.rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
