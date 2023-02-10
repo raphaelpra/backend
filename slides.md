@@ -309,7 +309,7 @@ La qualité du réseau, un petit truc qui a son importance suivant l'application
 ]
 .fifty[
 <br><br><br>
-**O**pen **S**ystem **I**nterconnection
+**O**pen **S**ystem **I**nterconnexion
 <br><br><br>
 
 **norme** mise en place par le commité ISO en 1984
@@ -363,7 +363,7 @@ C'est ce qu'on appelle l'adresse IP, pour _Internet Protocol_. L'adresse IP d'un
 
 ---
 
-# Interconnection
+# Interconnexion
 
 ## Réseau local
 
@@ -374,7 +374,7 @@ C'est ce qu'on appelle l'adresse IP, pour _Internet Protocol_. L'adresse IP d'un
 
 ---
 
-# Interconnection
+# Interconnexion
 
 ## Réseau distant
 
