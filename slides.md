@@ -284,6 +284,12 @@ La qualité du réseau, un petit truc qui a son importance suivant l'application
 
 ---
 
+class: middle, center
+
+# Un réseau et c'est tout ?
+
+---
+
 # Modèle OSI
 
 .cols[
@@ -459,10 +465,13 @@ Différents protocole établis :
 - UDP
 - ...
 
+<br><br>
 **⚠️ Attention ⚠️**
-
+<br><br>
 .center[
-La couche transport ne fait que définir la ***manière*** dont deux applications communiquent <br> mais ne spécifie en rien le ***contenu*** de ces communications
+La couche transport ne fait que définir la ***manière*** dont deux applications communiquent
+<br><br>
+mais ne spécifie en rien le ***contenu*** de ces communications
 ]
 
 ---
