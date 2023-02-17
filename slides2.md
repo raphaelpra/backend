@@ -364,9 +364,31 @@ pour garantir la sécurité de l'utilisateur
 
 # HTTP un truc pas safe ?
 
-Alors oui le HTTP de base n'est pas sécurisé
+.cols[
+.fifty[
+***Alors oui le HTTP de base n'est pas sécurisé***
+]
+.fifty[
+.center[
 
-Mais ce n'est pas très grave dans pleins de cas
+<iframe src="https://giphy.com/embed/1FMaabePDEfgk" width="200" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+]
+]
+]
+
+--
+
+.cols[
+.fifty[
+.center[
+
+<iframe src="https://giphy.com/embed/dZA4cLPCvSs1s5aCm7" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+]
+  ]
+  .fifty[
+    ***Mais ce n'est pas très grave dans pleins de cas***
+]
+]
 
 ---
 
@@ -417,6 +439,8 @@ class: center, middle
 
 # Et maintenant c'est fini ?
 
+.center[<iframe src="https://giphy.com/embed/I1nwVpCaB4k36" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+
 ---
 
 # Pause Exercice
@@ -432,12 +456,37 @@ Use-case :
 3. Je peux faire une requête GET sur `votre-url/info/<name>` qui doit me renvoyer un bout de html de la forme
 
 ```html
-<h1> Hello <name> your token is "A secret token" from Student X, Student Y, ... </h1>
+<h1>Hello NameFromPOST your token is TokenFromPOST</h1>
+<h2>We are Student X, Student Y, ...</h2>
 ```
 
+.cols[
+.fifty[
 Mettez vous par groupe de 2~3 et vous avez **30 minutes max**.
 
 .center[A la fin envoyez moi l'url de votre serveur et on test en réel !]
+]
+.fifty[
+
+````python
+import requests
+import sys
+
+url = "your url"
+name = "Sponge Bob"
+token = "un truc au pif"
+### POST
+resp = requests.post(f"{url}/api/register",
+           json={"name": name, "token": token})
+if resp.content.decode() != "OK":
+    print("Y a un problème dans le post")
+    sys.exit(1)
+### GET
+resp = requests.get(f"{url}/info/{name}")
+print(resp)
+    ```
+]
+]
 
 ---
 
@@ -499,16 +548,16 @@ Concrètement on va pouvoir stocker :
 # Mettre des cookies
 
 Rien de plus simple, dans l'en-tête de la réponse serveur à une requête client il suffit d'ajouter
-
+<br><br>
 .center[
 `Set-Cookie: <name>=<value>; <attributs...>`
 ]
-
+<br><br>
 Attributs de Cookie
 
 - `Expires` : durée de vie (date/heure)
 - `Max-Age` : durée de vie (seconde)
-- `Domain` : noms de domaine pour lesquels le cookie est renvoyé [par exemple](www.mat.minesparis.psl.eu)
+- `Domain` : noms de domaine pour lesquels le cookie est renvoyé [par exemple](https://www.mat.minesparis.psl.eu)
 - `Path` : chemin particulier pour lesquels le cookie est renvoyé
 - `Secure` : si autorise ou pas l'envoie via HTTP et non HTTPS
 - `HttpOnly` : si autorise ou pas l'accès via autre chose de du http(s)
@@ -641,7 +690,7 @@ socket.onmessage = function (event) {
 socket.onclose = function (event) {
   if (event.wasClean) {
     alert(
-      `[close] Connection closed cleanly, 
+      `[close] Connection closed cleanly,
       code=${event.code} reason=${event.reason}`
     );
   } else {
@@ -654,7 +703,7 @@ socket.onclose = function (event) {
 socket.onerror = function (error) {
   alert(`[error] ${error.message}`);
 };
-```
+````
 
 ]
 .fifty[
