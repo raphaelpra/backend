@@ -190,7 +190,7 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 
 .fifty[
 
-<iframe width="600px" height="400px" src="https://xkcd.com"></iframe>
+<iframe width="600px" height="400px" src="https://xkcd.com" style="-moz-transform: scale(0.75);"></iframe>
 
     ]
 
@@ -246,9 +246,9 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 
 # Solutions techniques
 
-Utilisation du parallélisme de tâches : processus/thread
+.center[<img src="/static/media/concurency.png" width="70%">]
 
-Nginx : utilisation de programmation asynchrone combiné avec du multithreading
+.center[Utilisation du parallélisme de tâches processus/thread et/ou programmation asynchrone]
 
 ---
 
@@ -478,12 +478,12 @@ token = "un truc au pif"
 ### POST
 resp = requests.post(f"{url}/api/register",
            json={"name": name, "token": token})
-if resp.content.decode() != "OK":
+if resp.status_code != 200:
     print("Y a un problème dans le post")
     sys.exit(1)
 ### GET
 resp = requests.get(f"{url}/info/{name}")
-print(resp)
+print(resp.content.decode())
     ```
 ]
 ]
@@ -746,13 +746,26 @@ C'est lié à la programmation asynchrone. Pour plus de détail je vous encourag
 
 ---
 
-# Un mot sur les framework
+# Un mot sur les Framework
+
+<br><br><br>
+
+.center[
+<img src="/static/media/framework.png" width="80%">
+]
 
 ---
 
 # In the next episode
 
+.cols[
+.fifty[
 .center[<iframe src="https://giphy.com/embed/xTiTnBdvZgewvjTBAs" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+]
+.fifty[
+.center[<iframe src="https://giphy.com/embed/RbSmVaVGptW03Wjw3a" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+]
+]
 
 .center[Un tour d'horizon du **Framework `Flask`** <br>
 qui va vous simplifier la vie pour tous les développements Web]
