@@ -9,6 +9,10 @@ pre {
 
 .remark-inline-code {
   font-family: "monospace";
+  background-color: rgba(135, 131, 120, 0.15);
+  border-radius: 3px;
+  padding: 0.1em 0.4em;
+  color: #eb5757;
 }
 
 .remark-code {

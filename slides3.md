@@ -94,6 +94,10 @@ Ensemble de programmes effectuant des opérations spécifiques, que vous allez u
 
 Par exemple `NumPy` en Python 🐍 est une librairie
 
+.center[
+<img src="/static/media/library.png" width="70%">
+]
+
 ]
 .vertbar[]
 .fifty[
@@ -104,6 +108,10 @@ Cadre de développement dans lequel le développeur vient s'inscrire, i.e. déve
 <br>
 
 Un code à trou 🕳️ en quelque sorte
+
+.center[
+<img src="/static/media/framework_concept.png" width="70%">
+]
 
 ]
 ]
@@ -137,6 +145,17 @@ Focalisé sur le développement côté serveur
 ]
 
 Dans le cadre de ce cours on ne se focalisera que sur le côté `backend`
+
+---
+
+# Les grands principes des framework backend
+
+.center[
+<img src="/static/media/framework_routes.png" width=100%>
+]
+
+A cela un framework complet ajoute des fonctionnalités de :
+.center[`Web Template`, `Sécurité`, `Accès à des bases de données`]
 
 ---
 
@@ -180,11 +199,95 @@ Micro-framework Python 🐍 développé depuis 2010.
 pip install flask
 ```
 
+Vous pourrez alors travailler en local 💻️ mais au besoin si vous voulez vous mettre dans une configuration serveur vous pouvez utiliser [@Replit](https://replit.com) il y a un template Flask.
+
+.center[Et rien de plus à faire 😯 <br>
+c'est l'avantage de Flask par rapport à Django <br> qui nécessite un setup plus poussé pour démarrer un projet]
+
 ---
 
-# Une première app
+# Minimal Working Example
 
-## Minimal Working Example
+- Step 1️⃣ :
+
+```python
+from flask import Flask
+```
+
+- Step 2️⃣
+
+```python
+app = Flask("Appli de ouf")
+```
+
+Ensuite tout repose sur une syntaxe un peu particulière :
+
+```python
+*@app.route("/une/url/cible")
+def la_fonction_correspondante():
+  // fait des trucs très intelligents
+  // et encore plus
+  return un_resultat ## pouvant être du html, du json, ....
+
+```
+
+Pour finir :
+
+.cols[
+.fifty[
+
+```python
+app.run(debug=True, port=3001)
+```
+
+]
+.fifty[
+`debug=True` permet d'activer du hot reloading
+]
+]
+
+---
+
+# Pour ceux qui auraient la flemme !
+
+---
+
+# Envoyer autre choses qu'une chaine !
+
+Si on veut pour une url donnée renvoyer non pas une chaîne mais un fichier HTML qui lui même peut nécessiter des CSS/JS il va falloir une organisation un peu particulière
+
+.cols[
+.fifty[
+
+```bash
+.
+├── app.py
+├── static
+│   ├── css
+│   │   └── wheel.css
+│   └── js
+│       └── wheel.js
+└── templates
+    └── wheel.html
+```
+
+]
+.fifty[
+
+```python
+from flask import render_template
+```
+
+```python
+@app.route("/")
+def index():
+  return render_template("wheel.html")
+```
+
+]
+]
+
+En revanche tous les fichiers contenus dans le dossier `static` seront automatiquement accessible sans que l'on ait rien à faire et ça c'est 🆒 !
 
 ---
 
@@ -192,66 +295,598 @@ pip install flask
 
 ## Passage de paramètres aux URLs
 
+.center[
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 894.5550217693453 62.253204331505" width="894.5550217693453" height="62.253204331505">
+
+  <!-- svg-source:excalidraw -->
+
+  <defs>
+    <style class="style-fonts">
+      @font-face {
+        font-family: "Virgil";
+        src: url("https://excalidraw.com/Virgil.woff2");
+      }
+      @font-face {
+        font-family: "Cascadia";
+        src: url("https://excalidraw.com/Cascadia.woff2");
+      }
+    </style>
+  </defs>
+  <rect x="0" y="0" width="894.5550217693453" height="62.253204331505" fill="#ffffff"></rect><g stroke-opacity="0.5" fill-opacity="0.5" stroke-linecap="round" transform="translate(563.4306688499037 10) rotate(0 160.56217645972083 21.1266021657525)"><path d="M9.71 0.16 L309.96 -0.1 L316.84 -0.96 L321.95 4.75 L321.58 30.23 L317.86 40.37 L312.22 42.39 L9.17 40.82 L3.37 38.43 L-0.95 31.91 L1.11 6.32 L6.88 -0.5 L11.55 -1.22" stroke="none" stroke-width="0" fill="#fd7e14"></path><path d="M10.56 0 M10.56 0 C81.63 -2.25, 156.35 -2.17, 310.56 0 M10.56 0 C81.14 0.56, 152.22 0.23, 310.56 0 M310.56 0 C318.62 1.46, 320.87 2.48, 321.12 10.56 M310.56 0 C316.16 -1.25, 319 3.37, 321.12 10.56 M321.12 10.56 C319.2 16.52, 321.66 19.52, 321.12 31.69 M321.12 10.56 C320.63 16.16, 321.31 23.33, 321.12 31.69 M321.12 31.69 C322.47 40.41, 316.29 41.97, 310.56 42.25 M321.12 31.69 C323.38 36.71, 317.38 41.49, 310.56 42.25 M310.56 42.25 C197.91 41.5, 85.79 42.26, 10.56 42.25 M310.56 42.25 C247.92 40.66, 186.11 40.51, 10.56 42.25 M10.56 42.25 C1.94 44.04, -0.42 39.17, 0 31.69 M10.56 42.25 C3.24 41.7, -1.32 37.43, 0 31.69 M0 31.69 C0.2 26.68, 1.75 19.96, 0 10.56 M0 31.69 C0.47 26.38, -0.45 18.84, 0 10.56 M0 10.56 C1.2 5.23, 5.13 0.59, 10.56 0 M0 10.56 C-1.79 3.36, 3.23 1.46, 10.56 0" stroke="#e67700" stroke-width="4" fill="none"></path></g><g stroke-opacity="0.9" fill-opacity="0.9" transform="translate(10 14.32660216575232) rotate(0 429.7877502441406 16.799999999999955)"><text x="0" y="0" font-family="Virgil, Segoe UI Emoji" font-size="28px" fill="#000000" text-anchor="start" style="white-space: pre;" direction="ltr" dominant-baseline="text-before-edge">https://domain-name.fr/une/route/donnée?name=Basile&amp;age=32</text></g></svg>
+]
+
+Besoin de récupérer dans la fonction `handler` la requête et donc ses arguments 🤔
+.center[Flask a tout prévu]
+
+.cols[
+.sixty[
+
+```python
+from flask import request
+
+@app.route("/une/route/donnee")
+def handler():
+  name = request.args.get("name")
+  age = request.args.get("age")
+  return f"<h1> Hello {name} ! Tu as vraiment {age} ans ? </h1>"
+```
+
+]
+.fourty[
+⚠️ Si l'argument n'existe pas la fonction `get` retourne `None`
+]
+]
+
+.center[🚧 Pas de notion de type dans les arguments, tout est chaîne de caractère 🚧]
+
 ---
 
-# Une API REST
+# URL paramétrique
+
+Possibilité offerte par Flask de définir des paramètres au sein même d'une URL
+
+.center[
+<img src="/static/media/route_param.png" width=70%>
+]
+
+.cols[
+.fifty[
+Possibilité de typer les paramètres :
+
+- string : pour tout texte sans slash
+- int : valeur entière positive
+- float : valeur flottante positive
+- path : comme les string mais accepte les slashs
+
+]
+.fifty[
+
+```python
+@app.route("/home/<int:user_id>")
+def home_uid(user_id):
+    ## do something according to user_id value
+    return ""
+```
+
+]
+]
+
+---
+
+# Un exemple : générateur de nombre aléatoire
+
+**_TODO Replit _**
+
+---
+
+# Une API complète
+
+Petit rappel du 1er épisode, HTTP différentes requêtes possibles
+
+- `GET` : requêtes pour **_obtenir_** du serveur une ressource (fichier html/css/js, image, video, données, ...)
+- `POST` : requêtes pour **_envoyer_** des données au serveur en vu d'un traitement (ajout d'un utilisateur dans une base de donnée, ...)
+- `PATCH` : requêtes pour **_modifier partiellement_** une ressource du serveur (mettre à jour l'addresse mail d'un utilisateur dans la base de donnée)
+- `DELETE` : requêtes pour **_supprimer_** une ressource du serveur (supprimer un commentaire sur un article, ... )
+
+Il s'agit là des principaux types de requêtes mais il en existe d'autre, pour la liste complète vous pouvez faire un tour [https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
+
+.center[<img src="/static/media/api_img.jpg" width="40%">]
+
+.footnote[Image from Jérémy Mésière, Architecte Middleware chez Manutan]
+
+---
+
+# Spécification des requêtes
+
+Une fonction pour un chemin mais pour différent type de requête
+
+```python
+from flask import request
+
+@app.route("/chemin", methods=['GET', 'POST'])
+def the_function():
+  if request.method == "POST":
+    ## do something for post
+    return post_response
+  elif request.method == "GET":
+    ## do other thing
+    return get_response
+```
+
+Une fonction par chemin et par type de requête
+
+```python
+@app.get("/chemin")
+def get_for_chemin():
+  return
+
+@app.post("/chemin")
+def post_for_chemin():
+  return
+```
+
+---
+
+# Récupérer les données reçue
+
+.center[Encore une fois tout se passe dans `request`]
+
+Plusieurs méthodes à disposition :
+
+- `request.is_json()` pour vérifier qu'il y a bien du json dans la requête
+- `request.get_json()` qui retourne le contenu de la requête
+
+.center[
+⚠️ Lorsque vous traitez une requête `POST` il faut impérativement que votre fonction renvoie quelque chose ⚠️
+]
 
 ---
 
 # Servir des pages HTML
 
+Deux cas de figures :
+
+- Fichiers "statiques" -> contenu ne dépendant de rien
+
+- Fichiers "dynamiques" -> contenu dépendant de données externes (base de données typiquement, paramètres utilisateur... )
+
 ---
 
-# CSR vs SSR
+# Fichies dynamique : CSR vs SSR
+
+Pour le cas de page dynamique deux approches existent
+
+.center[
+**C**lient **S**ide **R**endering
+<br><br> vs <br><br>
+**S**erver **S**ide **R**endering
+]
+
+.center[<iframe src="https://giphy.com/embed/QYMBnZjnxko0eCzBuF" width="480" height="270" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+]
 
 ---
 
 # Exemple pour illustrer
 
+**_TODO Replit_**
+
 ---
 
 # Approche CSR
+
+<img src="/static/media/csr.png" width=80%>
 
 ---
 
 # Approche SSR
 
+<img src="/static/media/ssr.png" width=80%>
+
+.center[
+Besoin d'un mécanisme de génération de page HTML
+]
+
 ---
 
 # Moteur de template
+
+Mécanisme de génération de page HTML à partir d'un modèle et de données.
+
+.center[
+<img src="/static/media/template_engine.png" width="50%">
+]
+
+Plusieurs techno/solutions envisageable :
+
+.center[Jinja2, Pug, Mustache, Ejs]
 
 ---
 
 # Jinja 2
 
+Moteur de template Pythonique 🐍
+
+Lien avec Flask via la fonction `render_template`
+
+```python
+from flask import render_template
+```
+
+Que l'on utilise dans les fonctions de routage
+
+```python
+@app.route("/")
+def index():
+  context = {}
+  ### do something
+  return render_template("templated_html.html", **context)
+```
+
+Où `context` est un dictionnaire Python contenant les variables que l'on souhaite transmettre de notre application Flask au moteur de template.
+
+---
+
+# Jinja 2
+
+## Substitution de variables
+
+Pour afficher dans le HTML le contenu d'une variable il faut entourer cette dernière par des doubles accolades dans du code HTML.
+
+```html
+<div>Bonjour {{ name }}</div>
+```
+
+---
+
+# Jinja 2
+
+## Blocs conditionnels
+
+Pour choisir d'afficher ou nom une partie de la page HTML vous pouvez utiliser des branchements de type _if_, _else if_, _else_. La syntaxe est la suivante
+
+```html
+{% if une_condition %}
+<div>du html en pagaille</div>
+{% elif une_autre_condition %}
+<div>un autre fouilli de html</div>
+{% else %}
+<div>le html par défaut</div>
+{% endif %}
+```
+
+_Remarque_ le `None` de Python se transforme en `none` dans Jinja2
+
+---
+
+# Jinja 2
+
+## Boucles for
+
+L'intérêt majeur étant l'affichage dynamique de tableau. Les boucles for dans Jinja2 vous permettent d'itérer sur tout objet Python iterable. La syntaxe est la suivante
+
+```html
+{% for x in ma_liste %}
+<div>Iteration {{ x }}</div>
+{% endfor %}
+```
+
 ---
 
 # Synthèse CSR vs SSR
+
+Deux modes avec des avantages et inconvénients
+
+---
+
+# Jinja2 plein d'autres choses
+
+On a survolé les fonctionnalités de base de Jinja mais il y a plein de trucs advance super pratiques
+
+[https://jinja.palletsprojects.com/en/3.1.x/templates/](https://jinja.palletsprojects.com/en/3.1.x/templates/)
+
+Liste non exhaustive :
+
+- Composition de template par héritage
+- Définition de macro
 
 ---
 
 # Gestion des formulaires avec Flask
 
+Un truc récurrent dans le web c'est les formulaires :
+
+- Authentification
+- Messagerie
+- Interface utilisateur
+- ...
+
+Un besoin
+
+.center[Spécifier les champs (nom et nature/type) ; agréger les données saisies par l'utilisateur ; envoyer ces données au backend ; traiter ces données et émettre une réponse ]
+
+Un module tout fait en Python WTForm et son interface pour Flask FlaskWTF
+
+```bash
+pip install flask-wtf
+```
+
+---
+
+# Principes
+
+L'utilisation de Flask-WTF se fait en définissant son propre formulaire en créant une classe héritant de la class `FlaskForm`.
+
+```python
+from flask_wtf import FlaskForm
+```
+
+Par exemple un formulaire de login pourrait s'écrire de la manière suivante :
+
+```python
+from wtforms import StringField, PasswordField, BooleanField, SubmitField
+from wtforms.validators import DataRequired
+
+class LoginForm(FlaskForm):
+    username = StringField('Username', validators=[DataRequired()])
+    password = PasswordField('Password', validators=[DataRequired()])
+    submit = SubmitField('Sign In')
+```
+
 ---
 
 # Les types input
+
+.cols[
+.fifty[
+Les différents types prédéfinis dans `WTForm` sont les suivants :
+
+- `BooleanField` : représente un booléen
+- `DateField` : représente une date
+- `FileField` : pour la sélection de fichier
+- `MultipleFileField` : pour la sélection multiple
+- `FloatField`
+- `IntegerField`
+- `DecimalField`
+- `SelectField` : choix parmi une liste d'option
+- `SubmitField` : le bouton de soumission du formulaire
+- `PasswordField` : champs pour le mot de passe (affiche des étoiles)
+- `TextAreaField` : champs de saisie de texte libre
+  ]
+  .fifty[
+
+Possibilité d'ajouter des "validateurs"
+
+- `DataRequired` : champs obligatoire
+- `Email` : le champs est une adresse email
+- `EqualTo` : test d'égalité
+- `NumberRange` : valeur numérique dans un intervalle
+- `Optional` : champs optionnel
+
+]
+]
+
+---
+
+# Utilisation en lien avec les templates
+
+.cols[
+.fifty[
+
+```html
+<html>
+  <head>
+    <title>Flask WTF</title>
+  </head>
+  <body>
+    <hr />
+    <h1>Sign In</h1>
+    <form action="" method="post" novalidate>
+      {{ form.hidden_tag() }}
+      <p>
+        {{ form.username.label }}<br />
+        {{ form.username(size=32) }}
+      </p>
+      <p>
+        {{ form.password.label }}<br />
+        {{ form.password(size=32) }}
+      </p>
+      <p>{{ form.submit() }}</p>
+    </form>
+  </body>
+</html>
+```
+
+]
+.fifty[
+La méthode `form.hidden_tag` qui a généré cette ligne. Alors d'un point de vue fonctionnelle elle ne sert pas à grand chose mais en revanche d'un point de vue sécurité elle est importante. C'est ce qui va permettre à Flask de se prémunir des attaque de type _cross-site request forgery_. Pour plus d'information à ce sujet Google reste votre ami.
+]
+]
+
+---
+
+# Données du formulaire dans les `handler`
+
+On peut directement réutiliser la classe `LoginForm` dans nos fonctions handler par exemple :
+
+```python
+@app.route("/", methods=['GET', 'POST'])
+def login():
+    form = LoginForm()
+    if form.validate_on_submit():
+        "Log in requested for {form.username.data} with passord {form.password.data}")
+        ## Add function here to check password
+
+        return redirect("/home")
+    return render_template("login.html", form=form)
+```
+
+---
+
+# Un petit bonus : les Cookies 🍪
+
+.cols[
+.fifty[
+
+```python
+@app.route('/route/install/cookie')
+def handler():
+
+  resp = make_response(render_template('mapage.html'))
+  resp.set_cookie('cookie', "eat me")
+
+  return resp
+```
+
+]
+.fifty[
+
+```python
+@app.route('/route/read/cookie')
+def handler():
+   name = request.cookies.get('cookieName')
+   # ...
+```
+
+]
+]
+
+Par exemple, nombre de fois qu'on visite une page !
+
+---
+
+# Et les websocket ...
+
+Petit rappel au cas où ...
+
+.cols[
+.fifty[
+<br><br>
+.center[connexion **bidirectionnelle** entre un client et le serveur
+<br><br>on parle de connexion *full-duplex*
+<br><br>Permet au serveur de ***pousser*** des informations vers le client sans que ce dernier n'est rien demandé 😲
+]
+]
+.fifty[
+.center[<img src="/static/media/ws.png" width="70%">]
+]
+]
 
 ---
 
 # Utilisation des Websocket
 
+Un module dédié dans Flask
+
+```bash
+pip install flask-socketio
+```
+
+L'utilisation de websocket avec Flask se fait de manière très simple. Il suffit tout d'abord de créer notre serveur websocket à l'aide de la classe `SocketIO` que l'on attache à notre application Flask.
+
+```python
+from flask_socketio import SocketIO
+socketio = SocketIO(app)
+```
+
+```python
+@socketio.on('message')
+def handle_message(json, methods=['GET', 'POST']):
+    print('received my event: ' + str(json))
+    socketio.emit('my response', json)
+```
+
 ---
 
-# In the next episode
+# Exemple de Chat Flask + SocketIO
 
 .cols[
 .fifty[
-.center[<iframe src="https://giphy.com/embed/xTiTnBdvZgewvjTBAs" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+
+```python
+from flask import Flask, render_template
+from flask_socketio import SocketIO
+
+app = Flask(__name__)
+socketio = SocketIO(app)
+
+@app.route('/')
+def sessions():
+    return render_template('session.html')
+
+@socketio.on('receive_msg')
+def handle_my_custom_event(json):
+    print('received my event: ' + str(json))
+    socketio.emit('the_response', json)
+
+```
+
 ]
 .fifty[
-.center[<iframe src="https://giphy.com/embed/RbSmVaVGptW03Wjw3a" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
-]
+
+```js
+let socket = io.connect("http://" + document.domain + ":" + location.port);
+$("form").on("submit", (e) => {
+  e.preventDefault();
+  let user_name = $("input.username").val();
+  let user_input = $("input.message").val();
+  socket.emit("receive_msg", {
+    user_name: user_name,
+    message: user_input,
+  });
+  $("input.message").val("").focus();
+});
+socket.on("the_response", (msg) => {
+  if (typeof msg.user_name !== "undefined") {
+    $("h3").remove();
+    $("div.message_holder").append(
+      '<div><b style="color: #000">' +
+        msg.user_name +
+        "</b> " +
+        msg.message +
+        "</div>"
+    );
+  }
+});
+```
+
 ]
 
-.center[Un tour d'horizon du **Framework `Flask`** <br>
-qui va vous simplifier la vie pour tous les développements Web]
+]
+
+---
+
+# Tout ce qu'on ne peut pas voir
+
+**Quelques ressources**
+
+.center[
+[https://flask.palletsprojects.com/en/1.1.x/](https://flask.palletsprojects.com/en/1.1.x/)
+
+[https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world](https://blog.miguelgrinberg.com/post/the-flask-mega-tutorial-part-i-hello-world)
+]
+
+---
+
+# Juste un mot quand même sur l'aspect Base de Données
+
+Pour faire de la base de donnée relationnelle simplement
+
+.center[SQLAlchemy]
+
+Avec une intégration Flask assez simple via `Flask-SQLAlchemy`
+
+Après dans le cas où vous avez besoin d'une base de données `simple` pour faire de la lecture/écriture minimaliste une solution :
+
+.center[Passer par un service externe]
+
+Trucs à la mode : Notion ou Airtable par exemple
+
+---
+
+# Dans le prochain épisode ...
+
+.center[
+
+<iframe src="https://giphy.com/embed/Xd6Y9TuDtylt5ug5PC" width="480" height="260" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+]
