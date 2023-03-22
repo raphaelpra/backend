@@ -460,10 +460,10 @@ Possibilité offerte par Flask de définir des paramètres au sein même d'une U
 .fifty[
 Possibilité de typer les paramètres :
 
-- string : pour tout texte sans slash
-- int : valeur entière positive
-- float : valeur flottante positive
-- path : comme les string mais accepte les slashs
+- `string` : pour tout texte sans slash
+- `int` : valeur entière positive
+- `float` : valeur flottante positive
+- `path` : comme les string mais accepte les slashs
 
 ]
 .fifty[
@@ -483,6 +483,11 @@ def home_uid(user_id):
 # Un exemple : générateur de nombre aléatoire
 
 API de génération de nombres aléatoires
+
+- `/api/integer` : génère des entiers
+- `/api/float` : génère des flottant
+
+Possibilité pour les deux d'ajouter un paramètre `n` par exemple `?n=10` pour générer 10 valeurs alétoires.
 
 .center[
 [http://bit.ly/3nb0yaG](http://bit.ly/3nb0yaG)
@@ -569,6 +574,8 @@ Deux cas de figures :
 
 - Fichiers "statiques" -> contenu ne dépendant de rien donc le plus simple en fait
 
+.center[<iframe src="https://giphy.com/embed/Rl9Yqavfj2Ula" width="400" height="300" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+
 --
 
 - Fichiers "dynamiques" -> contenu dépendant de données externes (base de données typiquement, paramètres utilisateur... )
@@ -592,15 +599,17 @@ Pour le cas de pages dynamiques deux approches existent
 
 ---
 
-# Exemple pour illustrer
+# Une démo
 
 .center[
 [http://bit.ly/3Tx8wqL](http://bit.ly/3Tx8wqL)
 ]
 
 .center[
-<img src="/static/media/qrcode/flask_ssr_vs_csr.png" width="40%">
+<img src="/static/media/qrcode/flask_ssr_vs_csr.png" width="30%">
 ]
+
+Il faut être curieu et ouvrir l'onglet "Network" des outils de développement du navigateur !
 
 ---
 
@@ -747,6 +756,7 @@ Un truc récurrent dans le web c'est les formulaires :
 - Interface utilisateur
 - ...
 
+<br><br>
 Un besoin
 
 .center[Spécifier les champs (nom et nature/type) ; agréger les données saisies par l'utilisateur ; envoyer ces données au backend ; traiter ces données et émettre une réponse ]
@@ -756,6 +766,13 @@ Un module tout fait en Python WTForm et son interface pour Flask FlaskWTF
 ```bash
 pip install flask-wtf
 ```
+
+<div style="position: absolute; top: 22%; left: 25%">
+<iframe src="https://giphy.com/embed/26FPJGjhefSJuaRhu" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
+<div style="position: absolute; top: 13%; right: 8%">
+<iframe src="https://giphy.com/embed/xT5LMUv1JAxBiCft4I" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 ---
 
@@ -811,6 +828,12 @@ Possibilité d'ajouter des "validateurs"
 
 ]
 ]
+
+--
+
+<div style="position: absolute; bottom: 10%; right: 5%; transform: rotate(20deg)">
+<iframe src="https://giphy.com/embed/lPF1CyJXXcTZmUrP2J" width="480" height="200" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+</div>
 
 ---
 
