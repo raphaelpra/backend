@@ -74,15 +74,23 @@ Un protocole HTTP(S) pour le web
 
 Réponse à un besoin mais lequel ?
 
-.center[Cadre de développement simplifiée]
+.center[***Cadre de développement simplifié***]
 
-En gros un guide <strike> spirituel </strike>, ou code à trou, permettant de développer simplement des applications.
+En gros un guide <strike> spirituel </strike>, permettant de développer simplement des applications spécifiques.
+
+.center[
+
+<iframe src="https://giphy.com/embed/MZW5o8f5RaH0Q" width="480" height="197" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+]
 
 ---
 
 # Framework vs Librairie
 
 .center[Frameworks, Librairies, même chose ? <br> ]
+
+--
 
 .cols[
 .fifty[
@@ -127,7 +135,10 @@ Un code à trou 🕳️ en quelque sorte
 
 .center[Framework frontend]
 
-React, Vue, Svelte, Angular
+.center[
+
+  <img src="/static/media/framework_frontend.png" width=50%>
+]
 
 Focalisé sur le développement d'application côté client.
 
@@ -137,7 +148,10 @@ Focalisé sur le développement d'application côté client.
 
 .center[Framework backend]
 
-Express, Django, Flask, Next.js
+.center[
+
+  <img src="/static/media/framework_backend.png" width=100%>
+]
 
 Focalisé sur le développement côté serveur
 
@@ -162,10 +176,18 @@ A cela un framework complet ajoute des fonctionnalités de :
 # Framework Flask
 
 Micro-framework Python 🐍 développé depuis 2010.
-
+<br><br>
 .center[
 <img src="/static/media/logos/logo_flask.png" width=40% />
 ]
+<br><br>
+🚧 Micro-framework ne veut pas dire pas utilisable sur des gros projets ⚠️
+<br><br>
+.center[
+Pinterest, Airbnb, Trivago, ...
+]
+<br><br>
+Micro-framework car noyau très léger et minimaliste mais pouvant être enrichi avec des extensions.
 
 ---
 
@@ -174,6 +196,8 @@ Micro-framework Python 🐍 développé depuis 2010.
 1️⃣ Vous savez tous a peu prêt faire du Python 🐍
 
 .center[donc on élimine tout ce qui n'est pas à base Python]
+
+--
 
 2️⃣ On va essayer de vous apprendre des trucs utilisés par ailleurs
 
@@ -185,9 +209,58 @@ Micro-framework Python 🐍 développé depuis 2010.
 </figure>
 ]
 
+--
+
 3️⃣ Pourquoi Flask et pas Django
 
 .center[J'ai une séance de 3 heures pas un semestre ... <span style="font-size: xx-small">et puis j'aime pas Django</span> 😒]
+
+---
+
+class: middle, center
+
+# Mais au fait ...
+
+# ... pourquoi on s'intéresse à ça ?
+
+---
+
+# GUI
+
+Faire le pont 🌉 entre :
+
+.center[un code de calcul/traitement de donnée/...
+
+et
+
+une interface graphique
+]
+
+Deux approches :
+
+.cols[
+.fifty[
+.center[***Old school***]
+
+Utilisation de librairies graphiques et développement d'un client lourd
+
+.center[
+<img src="/static/media/qt_fltk.png" width=50%>
+]
+
+]
+.vertbar[]
+.fifty[
+.center[***New age***]
+
+Utilisation du navigateur
+
+.center[
+<img src="/static/media/html_css_js.png" width=80%>
+]
+
+]
+]
 
 ---
 
@@ -195,13 +268,18 @@ Micro-framework Python 🐍 développé depuis 2010.
 
 ## Installation
 
+Pour commencer on installe `Flask`
+
 ```bash
 pip install flask
 ```
 
-Vous pourrez alors travailler en local 💻️ mais au besoin si vous voulez vous mettre dans une configuration serveur vous pouvez utiliser [@Replit](https://replit.com) il y a un template Flask.
-
+Vous pourrez alors travailler en local 💻️. <br>
+<br>
+Au besoin si vous voulez vous mettre dans une configuration serveur vous pouvez utiliser [@Replit](https://replit.com) il y a un template Flask.
+<br><br>
 .center[Et rien de plus à faire 😯 <br>
+<br><br>
 c'est l'avantage de Flask par rapport à Django <br> qui nécessite un setup plus poussé pour démarrer un projet]
 
 ---
@@ -249,6 +327,18 @@ app.run(debug=True, port=3001)
 ---
 
 # Pour ceux qui auraient la flemme !
+
+.cols[
+.sixty[
+.center[<iframe src="https://giphy.com/embed/4KkSbPnZ5Skec" width="471" height="480" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+
+]
+.fourty[
+[http://bit.ly/3Z5C5k7](http://bit.ly/3Z5C5k7)
+
+.center[<img src="/static/media/qrcode/flask_sandbox.png" width="60%">]
+]
+]
 
 ---
 
@@ -316,6 +406,7 @@ En revanche tous les fichiers contenus dans le dossier `static` seront automatiq
 ]
 
 Besoin de récupérer dans la fonction `handler` la requête et donc ses arguments 🤔
+
 .center[Flask a tout prévu]
 
 .cols[
@@ -375,7 +466,15 @@ def home_uid(user_id):
 
 # Un exemple : générateur de nombre aléatoire
 
-**_TODO Replit _**
+API de génération de nombres aléatoires
+
+.center[
+[http://bit.ly/3nb0yaG](http://bit.ly/3nb0yaG)
+]
+
+.center[
+<img src="/static/media/qrcode/flask_random_api.png" width="20%">
+]
 
 ---
 
@@ -440,21 +539,31 @@ Plusieurs méthodes à disposition :
 ⚠️ Lorsque vous traitez une requête `POST` il faut impérativement que votre fonction renvoie quelque chose ⚠️
 ]
 
+[http://bit.ly/40ly786](http://bit.ly/40ly786)
+
+.center[
+<img src="/static/media/qrcode/flask_post.png" width="20%">
+]
+
 ---
 
 # Servir des pages HTML
 
 Deux cas de figures :
 
-- Fichiers "statiques" -> contenu ne dépendant de rien
+- Fichiers "statiques" -> contenu ne dépendant de rien donc le plus simple en fait
+
+--
 
 - Fichiers "dynamiques" -> contenu dépendant de données externes (base de données typiquement, paramètres utilisateur... )
+
+.center[Page profil utilisateur, liste de produits disponibles, ... ]
 
 ---
 
 # Fichies dynamique : CSR vs SSR
 
-Pour le cas de page dynamique deux approches existent
+Pour le cas de pages dynamiques deux approches existent
 
 .center[
 **C**lient **S**ide **R**endering
@@ -469,22 +578,30 @@ Pour le cas de page dynamique deux approches existent
 
 # Exemple pour illustrer
 
-**_TODO Replit_**
+.center[
+[http://bit.ly/3Tx8wqL](http://bit.ly/3Tx8wqL)
+]
+
+.center[
+<img src="/static/media/qrcode/flask_ssr_vs_csr.png" width="40%">
+]
 
 ---
 
 # Approche CSR
 
-<img src="/static/media/csr.png" width=80%>
+.center[<img src="/static/media/csr.png" width=80%>]
 
 ---
 
 # Approche SSR
 
-<img src="/static/media/ssr.png" width=80%>
+.center[
+<img src="/static/media/ssr.png" width=75%>
+]
 
 .center[
-Besoin d'un mécanisme de génération de page HTML
+Besoin d'un mécanisme de ***génération de page HTML***
 ]
 
 ---
@@ -497,9 +614,9 @@ Mécanisme de génération de page HTML à partir d'un modèle et de données.
 <img src="/static/media/template_engine.png" width="50%">
 ]
 
-Plusieurs techno/solutions envisageable :
+Plusieurs techno/solutions :
 
-.center[Jinja2, Pug, Mustache, Ejs]
+.center[***Jinja2***, **Pug**, **Mustache**, **Ejs**]
 
 ---
 
@@ -576,6 +693,19 @@ L'intérêt majeur étant l'affichage dynamique de tableau. Les boucles for dans
 # Synthèse CSR vs SSR
 
 Deux modes avec des avantages et inconvénients
+
+Grosso modo
+
+- CSR c'est cool pour
+
+.center[Avoir des pages avec beaucoup d'interaction,<br><br>notamment lorsque l'on est plus sur de l'appli web que du site web]
+
+- SSR c'est bien pour
+
+.center[accélérer le chargement initial de votre site, si vous avez peu d'interaction avec l'utilisateur,<br><br>si vous souhaitez optimiser votre référencement naturel dans les moteurs de recherches.]
+
+Et d'un point de vue très pragmatique
+.center[peut dépendre également du confort que vous avez à programmer en Python ou Javascript]
 
 ---
 
@@ -721,6 +851,10 @@ def login():
     return render_template("login.html", form=form)
 ```
 
+[http://bit.ly/3JyTBb2](http://bit.ly/3JyTBb2)
+
+.center[<img src="/static/media/qrcode/flask_form.png" width="20%">]
+
 ---
 
 # Un petit bonus : les Cookies 🍪
@@ -752,6 +886,64 @@ def handler():
 ]
 
 Par exemple, nombre de fois qu'on visite une page !
+
+[http://bit.ly/408GbcF](http://bit.ly/408GbcF)
+
+.center[
+<img src="/static/media/qrcode/flask_cookie.png" width="20%">
+]
+
+---
+
+# Un mot sur la notion de `Session`
+
+Très souvent besoin de la notion de session utilisateur
+
+.center[Stocker des infos spécifiques à un utilisateur entre deux requêtes]
+
+Possible de faire ça à la main 🖖🏻 à l'aide de cookies 🍪 ...
+
+.center[mais Flask peut tout faire à votre place]
+
+.cols[
+.fourty[
+
+```python
+from Flask import session
+```
+
+Besoin d'un peu de config par contre
+
+```python
+app.config["SECRET_KEY"] = "un secret"
+```
+
+[http://bit.ly/3JYyboX](http://bit.ly/3JYyboX)
+]
+.sixty[
+
+```python
+
+@app.route("/une/url/<string:username>")
+def handler( username ):
+  session["name"] = username
+  return "Ok j'ai enregistré"
+
+@app.route("/")
+def index():
+  name = session.get("name")
+  if name:
+    return f"Hello {name}"
+  else:
+    return "Merci de faire d'abord une requête vers /une/url/<username>"
+```
+
+]
+]
+
+<div style="position: absolute; top: 10%; right: 5%">
+<img src="/static/media/qrcode/flask_session_demo.png" width="200px">
+</div>
 
 ---
 
@@ -789,9 +981,11 @@ from flask_socketio import SocketIO
 socketio = SocketIO(app)
 ```
 
+Ensuite rien de révolutionnaire on enregistre des fonctions pour des `events` donnés
+
 ```python
 @socketio.on('message')
-def handle_message(json, methods=['GET', 'POST']):
+def handle_message(json):
     print('received my event: ' + str(json))
     socketio.emit('my response', json)
 ```
@@ -821,6 +1015,14 @@ def handle_my_custom_event(json):
 
 ```
 
+.center[
+Possibilité d'ajouter par dessus la notion de `room` <br><br>
+pour une gestion plus fine des destinataires
+<br><br>
+📥️ 📤️
+<br><br>
+[http://bit.ly/3yVAEdt](http://bit.ly/3yVAEdt)
+]
 ]
 .fifty[
 
@@ -854,9 +1056,19 @@ socket.on("the_response", (msg) => {
 
 ]
 
+<div style="position: absolute; bottom: 5%; left: 40%">
+<img src="/static/media/qrcode/flask_socketio.png" width="200px">
+</div>
+
 ---
 
 # Tout ce qu'on ne peut pas voir
+
+.center[🚀 Cours en mode express 🚀]
+
+Plein de choses que l'on ne peut pas voir :
+
+.center[Authentification, gestion de base de données,<br><br>sécurité des applications web, interface avec services externes, ... ]
 
 **Quelques ressources**
 
@@ -884,7 +1096,11 @@ Trucs à la mode : Notion ou Airtable par exemple
 
 ---
 
+class: middle
+
 # Dans le prochain épisode ...
+
+--
 
 .center[
 
