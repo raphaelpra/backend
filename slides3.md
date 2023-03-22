@@ -68,6 +68,18 @@ Un protocole HTTP(S) pour le web
 ]
 ]
 
+<div style="position: absolute; bottom: 5%; left: 40%;">
+<img src="/static/media/serveur_recap.png" width="400px">
+</div>
+
+<div style="position: absolute; bottom: 15%; left: 80%;">
+<img src="/static/media/logos/letsencrypt.png" width="200px">
+</div>
+
+<div style="position: absolute; bottom: 0%; left: 75%;">
+<p style="font-size: 4rem"> 🍪 </p>
+</div>
+
 ---
 
 # Les framework
@@ -225,7 +237,7 @@ class: middle, center
 
 ---
 
-# GUI
+# Graphical User Interface
 
 Faire le pont 🌉 entre :
 
@@ -261,6 +273,10 @@ Utilisation du navigateur
 
 ]
 ]
+
+<div style="transform: rotate(40deg); opacity: 0.9;position: absolute; right: 10%; top: 25%; border: 1px solid darkblue; border-radius: 10px; padding: 2pt 10pt; background-color: aliceblue;">
+<p style="opacity: 1; color: crimson; font-weight: bold; background-color: aliceblue"> Projets d'informatique ... </p>
+</div>
 
 ---
 
@@ -829,7 +845,21 @@ Possibilité d'ajouter des "validateurs"
 
 ]
 .fifty[
-La méthode `form.hidden_tag` qui a généré cette ligne. Alors d'un point de vue fonctionnelle elle ne sert pas à grand chose mais en revanche d'un point de vue sécurité elle est importante. C'est ce qui va permettre à Flask de se prémunir des attaque de type _cross-site request forgery_. Pour plus d'information à ce sujet Google reste votre ami.
+La méthode `form.hidden_tag` va générer une ligne du genre :
+
+```html
+<input
+  id="csrf_token"
+  name="csrf_token"
+  type="hidden"
+  value="ImI0ODg5NjE3NzdiYjM5NWJlZWRiYzE3MDlmZjBhNjFkMDhlMjE4M2Ii.Xq_IiQ.GG9q2vWBhqbZGuGGJue2MwDIQwI"
+/>
+```
+
+Auncun intérêt fonctionnel. En revanche utile pour la sécurité 🚨 et se prémunir des attaques type
+<br><br>
+.center[**C**ross **S**ite **R**equest **F**orgery]
+
 ]
 ]
 
