@@ -113,7 +113,7 @@ class: center, middle
 
 <br><br><br>
 Des **applications** qui peuvent se **contacter**, <br><br> **échanger** des **données**
-<br><br> avec des rêgles clairement établie permettant de **déclencher des actions**
+<br><br> avec des rêgles clairement établies permettant de **déclencher des actions**
 
 ---
 
@@ -121,7 +121,7 @@ Des **applications** qui peuvent se **contacter**, <br><br> **échanger** des **
 
 On va essayer de répondre aux questions suivantes
 
-- comment communiquer entre deux applications sur un réseau ?
+- Comment communiquer entre deux applications sur un réseau ?
 - Comment envoyer un message d'une application vers une autre via le réseau ?
 - Sous quel format envoyer ce message ?
 - Comment fait-on une application Python capable d'écouter sur le réseau ?
@@ -161,7 +161,7 @@ On va regarder les plus classiques
 
 .center[<img src="static/media/PeerToPeer.png" style="width: 50%;">]
 
-Très à la mode une époque où Netflix/Amazon Prime/... n'existaient pas (oui oui cette période est réelle 🤯)
+Très à la mode à une époque où Netflix/Amazon Prime/... n'existaient pas (oui oui cette période est réelle 🤯)
 
 ℹ️ Projet [folding@home](https://apps.foldingathome.org/serverstats)
 
@@ -196,7 +196,7 @@ Tout d'abord un réseau c'est quoi ?
 
 .center[Et bien c'est une **infrastructure** que l'on utilise pour faire transiter des données. ]
 
-Dans sa version la plus élémentaire qui soit un réseau est composé de deux appareils reliés entre eux par un câble réseau par exemple.
+Dans sa version la plus élémentaire qui soit un réseau est composé de deux appareils reliés entre eux, par un câble réseau par exemple.
 
 Le point important là-dedans c'est qu’un appareil connecté au réseau doit posséder une **interface réseau**, un composant capable de communiquer c'est-à-dire d'envoyer et recevoir un signal.
 
@@ -847,7 +847,103 @@ Dans le domaine particulier du Web l'API se définit en fait à partir d'une URL
 
 ---
 
-# Faisons notre propre API
+# API REST
+
+.center[**Representational State Transfer**]
+
+Ensemble de principes gouvernant l'architercture d'application Web.
+
+- Méthodes HTTP :
+
+  Les opérations CRUD sont réalisées à l'aide des méthodes HTTP : GET (lire), POST (créer), PUT/PATCH (mettre à jour), DELETE (supprimer).
+  Exemple : Une requête GET à l'API d'un blog pour récupérer un article spécifique.
+
+- Ressources :
+
+  Dans REST, toutes les données ou états sont considérés comme des "ressources".
+  Chaque ressource est identifiée de manière unique par une URI (Uniform Resource Identifier).
+  Exemple : /articles/123 peut représenter la ressource pour l'article avec l'ID 123.
+
+- Sans état (Stateless) :
+
+  Chaque requête de l'API REST doit contenir toutes les informations nécessaires pour être comprise par le serveur. Aucun état de session n'est conservé sur le serveur.
+  Avantages : Simplifie la conception du serveur et améliore la scalabilité.
+
+- Représentation des ressources :
+
+  Les ressources peuvent être représentées en différents formats, JSON et XML étant les plus courants.
+  Le choix du format est souvent indiqué dans l'en-tête HTTP Content-Type de la requête.
+
+---
+
+# L'importance des headers HTTP
+
+.center[
+Les headers HTTP sont des paramètres envoyés dans les requêtes et réponses HTTP qui fournissent des informations essentielles sur la transaction HTTP.
+]
+
+Notamment cela va nous permettre de gérer l'authentification 🔐 lorsqu'on veut accéder à des API protégées, le format des données, la version de l'API
+
+Quelques headers **_classiques_** :
+
+- `Content-Type` : indique le type de média du corps de la requête ou de la réponse. Dans le cadre des API REST, `application/json` est couramment utilisé, indiquant que l'on ne travaille qu'avec du JSON.
+  <br><br>
+- `Accept` : le type de contenu que l'on accepte en réponse, généralement ̀`application/json` également
+  <br><br>
+- `Authorization` : on va voir dans la prochaine slide qu'il permet de gérer l'authentification lorsqu'on veut accéder à une ressource protégée
+
+---
+
+# Un mot sur l'authentification
+
+Pour s'authentifier auprès d'une API REST, il faut à chaque requête fournir la preuve de qui l'on est. Cela passe généralement par l'association à la requète d'un token qui permet à l'application de savoir
+
+.cols[
+.fifty[
+
+- Qui l'on est
+- Ce que l'on a le droit de faire sur quelles ressources
+  ]
+  .fifty[
+
+```bash
+Authorization: Bearer <token>
+```
+
+]
+]
+
+L'obtention du token se fait généralement via l'interface Web du service visé.
+
+.center[⚠️ Attention un token ne doit ***jamais*** être partagé 💣️]
+
+Dans la plupart des cas à un token est associé :
+
+- Un ensemble de ressources accessibles
+- Les droits sur ces ressources (consultation, modification, création, suppression)
+- Une durée de validité (date d'expiration du token)
+
+.center[Une solution pour conserver les tokens d'une application est d'utiliser un fichier `.env`]
+
+---
+
+# Une API utilisable est une API documentée
+
+Donc pour conclure sur les API, il s'agit d'un moyen très simple pour offrir une interface vers des ressources et données distantes. La seule difficulté dans ce domaine c'est la définition et surtout la **documentation des API** 📑. Donc si vous mettez en place un service Web disposant d'une API et que vous souhaitez ouvrir votre service vers l'extérieur merci de prendre le temps de documenter votre API.
+
+On trouve en ligne plein d'API ouverte un lien pour avoir une liste non exhaustive
+
+.center[
+[https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis)<br>
+ou <br>
+[http://bit.ly/3YHC1qX](http://bit.ly/3YHC1qX) <br>
+ou <br>
+<img src="/static/media/qrcode/public_api_qr.png" width="30%">
+]
+
+---
+
+# Illustration
 
 Considérons par exemple le cas d'un serveur générant des listes de nombres aléatoires à la demande. L'api d'un tel serveur pourrait être
 
@@ -861,22 +957,6 @@ Considérons par exemple le cas d'un serveur générant des listes de nombres al
 <br> ou <br>
 <img src="/static/media/qrcode/random_number.png" width="20%">
 
-]
-
----
-
-# Une API utilisable est une API documentée
-
-Donc pour conclure sur les API il s'agit d'un moyen très simple pour offrir une interface vers des ressources et données distantes. La seule difficulté dans ce domaine c'est la définition et surtout la documentation des API. Donc si vous mettez en place un service Web disposant d'une API et que vous souhaitez ouvrir votre service vers l'extérieur merci de prendre le temps de documenter votre API.
-
-On trouve en ligne plein d'API ouverte un lien pour avoir une liste non exhaustive
-
-.center[
-[https://github.com/public-apis/public-apis](https://github.com/public-apis/public-apis)<br>
-ou <br>
-[http://bit.ly/3YHC1qX](http://bit.ly/3YHC1qX) <br>
-ou <br>
-<img src="/static/media/qrcode/public_api_qr.png" width="30%">
 ]
 
 ---
@@ -914,7 +994,7 @@ C'est toute la complexité qui se cache derrière mon Use-Case :
 
 ---
 
-# Application
+# Application 1
 
 Je vous ai mis en place un serveur minimaliste offrant une API permettant :
 
@@ -935,6 +1015,49 @@ L'idée est que vous réalisiez les actions suivantes :
    3. faire des requètes `GET`/`POST` pour vous envoyer des messages entre vous
 2. Pour les plus joueurs, à l'aide du combo HTML/CSS/JS
    1. Faire le client web de ce serveur 🤗 !
+
+---
+
+# Application 2 : utilisation de l'API Notion
+
+L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de donnée Notion. **Une squelette est disponible [ici]()**. L'application à terme doit pouvoir :
+
+.cols[
+.fifty[
+
+- Lister l'ensemble des tâches d'une base de données
+- Afficher le détail d'une tâche défini par son ID
+  ]
+.fifty[
+- Changer le status d'une tâche
+- Ajouter du texte dans la page de la tâche
+  ]
+]
+
+.cols[
+.fifty[
+**Step 1️⃣** : créer une base de données dans Notion
+.center[Vous pouvez dupliquer [celle-ci](https://bmarchand.notion.site/04620d6c67274d8e96211ddc738acf76?v=31bcb2e38fa242cfbc8eb9c51eca6108)]
+
+**Step 2️⃣** : créer une intégration Notion
+.center[Se rendre sur le site [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations) et créer une intégration]
+
+<img src="/static/media/notion-token.png" width="60%">
+
+]
+
+.fifty[
+**Step 3️⃣** : ajouter la base de donnée à l'intégration créée précédemment
+.center[depuis la page de la base de donnée]
+
+<img src="/static/media/notion-db-to-integ.png" width="20%">
+
+**Step 4️⃣** : récuper l'ID de la base de donnée
+
+<img src="/static/media/notion-db-id.png" width="80%">
+
+]
+]
 
 ---
 
