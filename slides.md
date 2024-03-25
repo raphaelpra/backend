@@ -1020,7 +1020,7 @@ L'idée est que vous réalisiez les actions suivantes :
 
 # Application 2 : utilisation de l'API Notion
 
-L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de donnée Notion. **Une squelette est disponible [ici]()**. L'application à terme doit pouvoir :
+L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de donnée Notion. **Une squelette est disponible [ici](https://github.com/ue22-p23/notion-api-demo-skeleton)**. L'application à terme doit pouvoir :
 
 .cols[
 .fifty[
@@ -1028,11 +1028,11 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 - Lister l'ensemble des tâches d'une base de données
 - Afficher le détail d'une tâche défini par son ID
   ]
-.fifty[
+  .fifty[
 - Changer le status d'une tâche
 - Ajouter du texte dans la page de la tâche
   ]
-]
+  ]
 
 .cols[
 .fifty[
