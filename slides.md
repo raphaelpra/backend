@@ -853,26 +853,34 @@ Dans le domaine particulier du Web l'API se définit en fait à partir d'une URL
 
 Ensemble de principes gouvernant l'architercture d'application Web.
 
-- Méthodes HTTP :
+.cols[
+.fifty[
 
-  Les opérations CRUD sont réalisées à l'aide des méthodes HTTP : GET (lire), POST (créer), PUT/PATCH (mettre à jour), DELETE (supprimer).
+- **Méthodes HTTP** :
+
+  Les opérations sont réalisées à l'aide des méthodes HTTP : GET (lire), POST (créer), PUT/PATCH (mettre à jour), DELETE (supprimer).
   Exemple : Une requête GET à l'API d'un blog pour récupérer un article spécifique.
 
 - Ressources :
 
   Dans REST, toutes les données ou états sont considérés comme des "ressources".
-  Chaque ressource est identifiée de manière unique par une URI (Uniform Resource Identifier).
+  Chaque ressource est **identifiée de manière unique** par une URI (Uniform Resource Identifier).
   Exemple : /articles/123 peut représenter la ressource pour l'article avec l'ID 123.
+  ]
+  .fifty[
 
-- Sans état (Stateless) :
+- Sans état (**Stateless**) :
 
-  Chaque requête de l'API REST doit contenir toutes les informations nécessaires pour être comprise par le serveur. Aucun état de session n'est conservé sur le serveur.
+  Chaque requête de l'API REST doit **contenir toutes les informations nécessaires** pour être comprise par le serveur. **Aucun état de session** n'est conservé sur le serveur.
   Avantages : Simplifie la conception du serveur et améliore la scalabilité.
 
 - Représentation des ressources :
 
   Les ressources peuvent être représentées en différents formats, JSON et XML étant les plus courants.
   Le choix du format est souvent indiqué dans l'en-tête HTTP Content-Type de la requête.
+
+  ]
+  ]
 
 ---
 
@@ -988,7 +996,6 @@ Par exemple :
 <img src="/static/media/make.png" width="40%">
 ]
 
-C'est toute la complexité qui se cache derrière mon Use-Case :
 <br><br>
 .center[demande de support par mail qui provoque une nouvelle entrée dans une base de donnée<br>et une notification par mail si "urgent" dans le sujet du mail 🤯]
 
