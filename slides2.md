@@ -175,6 +175,44 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 
 ---
 
+# Un mot sur le serverless
+
+.center[Un serveur traditionnel passe son temps à attendre ...
+
+🥱
+
+]
+
+.center[**_Un serveurless est un serveur qui n'attend pas_**]
+
+Le principe est de découper le traitement en petites **tâches indépendantes** (fonctions) qui seront exécutées **à la demande**
+
+.cols[
+.fifty[
+
+## Avantages
+
+- Pas de gestion de serveur
+- Pas de coût fixe
+- Évolutif
+
+]
+.fifty[
+
+## Inconvénients/Difficultés
+
+- Temps de démarrage
+- Coût à l'usage
+- Difficulté de débogage
+- Stateless
+
+]
+]
+
+Coût plus faible pour les fournisseurs car ils peuvent optimiser l'utilisation des ressources
+
+---
+
 # Tous les serveurs font la même chose ?
 
 **Deux applications**
@@ -233,6 +271,43 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 
 ---
 
+# Solutions d'hébergement gratuit
+
+.cols[
+.fifty[
+
+## Sites statiques
+
+- GitHub Pages
+- GitLab Pages
+- Netlify
+- Vercel
+- ...
+
+]
+.fifty[
+
+## Sites dynamiques
+
+- ~~Heroku~~
+- Glitch
+- Repl.it
+- PythonAnywhere
+- Vercel (serverless)
+- ...
+
+]
+
+]
+
+.center[Plein d'offres sur le marché, à vous de choisir celle qui vous convient le mieux]
+
+Attention en revanche :
+
+.center[**_Gratuit_** ne veut pas dire **_sans limite_**]
+
+---
+
 # Le serveur web : un besoin de perf 🚀
 
 .center[<img src="/static/media/clients.png" width="80%">]
@@ -269,7 +344,7 @@ Possible de voir les requêtes et réponses dans votre navigateur via
 
 ---
 
-# Faisons un serveur http de base
+<!-- # Faisons un serveur http de base
 
 .center[
 [http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
@@ -281,9 +356,9 @@ Possible de voir les requêtes et réponses dans votre navigateur via
 
 📢 ⚠️ On regarde le fichier `minimal_server.py`
 
----
+--- -->
 
-# Au passage c'est quoi mon IP ?
+# (Au passage c'est quoi mon IP ?)
 
 Quand je suis un serveur comment je fais pour connaitre mon IP ?
 
@@ -311,7 +386,23 @@ def find_my_ip():
 
 ---
 
-# Un truc un peu plus advance : définissons une API
+# Traitement des requêtes
+
+Le fonctionnement interne d'un serveur HTTP est assez simple
+
+1. **Écouter** sur un port (80 par défaut)
+2. **Accepter** une connexion
+3. **Lire** la requête
+4. **Traiter** la requête
+5. **Envoyer** la réponse
+6. **Fermer** la connexion
+
+Le point important est la transition entre les étapes 3 et 4 qui est le coeur du serveur HTTP
+car définit la manière dont le serveur va traiter la requête.
+
+---
+
+# Exemple fait à la main
 
 .center[
 [http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
@@ -322,6 +413,180 @@ def find_my_ip():
 ]
 
 📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`
+
+---
+
+# Évidemment il existe des framework pour ça !
+
+---
+
+# Les framework
+
+Réponse à un besoin mais lequel ?
+
+.center[***Cadre de développement simplifié***]
+
+En gros un guide <strike> spirituel </strike>, permettant de développer simplement des applications spécifiques.
+
+.center[
+
+<iframe src="https://giphy.com/embed/MZW5o8f5RaH0Q" width="480" height="197" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>
+
+]
+
+---
+
+# Framework vs Librairie
+
+.center[Frameworks, Librairies, même chose ? <br> ]
+
+--
+
+.cols[
+.fifty[
+.center[<b> Librairies </b>]
+
+Ensemble de programmes effectuant des opérations spécifiques, que vous allez utiliser de manière ponctuelle au sein de vos programmes en suivant votre propre logique.
+
+<br>
+
+Par exemple `NumPy` en Python 🐍 est une librairie
+
+.center[
+<img src="/static/media/library.png" width="70%">
+]
+
+]
+.vertbar[]
+.fifty[
+.center[<b> Framework </b>]
+
+Cadre de développement dans lequel le développeur vient s'inscrire, i.e. développer des fonctionnalités/comportements. Là ce n'est plus le développeur qui fixe sa logique mais le framework.
+
+<br>
+
+Un code à trou 🕳️ en quelque sorte
+
+.center[
+<img src="/static/media/framework_concept.png" width="70%">
+]
+
+]
+]
+
+---
+
+# Frontend, backend
+
+.center[⚠️ Framework web un terme très, trop, générique ⚠️]
+
+.cols[
+.fifty[
+
+.center[Framework frontend]
+
+.center[
+
+  <img src="/static/media/framework_frontend.png" width=50%>
+]
+
+Focalisé sur le développement d'application côté client.
+
+]
+.vertbar[]
+.fifty[
+
+.center[Framework backend]
+
+.center[
+
+  <img src="/static/media/framework_backend.png" width=100%>
+]
+
+Focalisé sur le développement côté serveur
+
+]
+]
+
+---
+
+# Les grands principes des framework backend
+
+.center[
+<img src="/static/media/framework_routes.png" width=100%>
+]
+
+A cela un framework complet ajoute des fonctionnalités de :
+.center[`Web Template`, `Sécurité`, `Accès à des bases de données`]
+
+---
+
+# Framework Flask
+
+Micro-framework Python 🐍 développé depuis 2010.
+<br><br>
+.center[
+<img src="/static/media/logos/logo_flask.png" width=40% />
+]
+<br><br>
+🚧 Micro-framework ne veut pas dire pas utilisable sur des gros projets ⚠️
+<br><br>
+.center[
+Pinterest, Airbnb, Trivago, ...
+]
+<br><br>
+Micro-framework car noyau très léger et minimaliste mais pouvant être enrichi avec des extensions.
+
+---
+
+# Le setup de base
+
+## Installation
+
+```bash
+pip install flask
+```
+
+--
+
+## Minimal working example
+
+```python
+from flask import Flask
+app = Flask(__name__)
+
+@app.route('/')
+def hello_world():
+    return 'Hello, World!'
+
+if __name__ == '__main__':
+    app.run()
+```
+
+.center[
+Une fois lancé -> [http://localhost:5000](http://localhost:5000)
+]
+
+.center[? C'est quoi .clignote[`@app.route('/')`] ?]
+
+---
+
+# Les routes
+
+`@app.route` est un décorateur qui permet d'associer une fonction à une URL et un type de requête HTTP.
+
+Dans sa version complète on peut écrire :
+
+```python
+@app.route('/hello', methods=['GET', 'POST'])
+def hello():
+  if request.method == 'POST':
+    ## traitement
+  elif request.method == 'GET':
+    ## traitement
+  else:
+    return "Méthode non autorisée", 405
+```
 
 ---
 
@@ -336,6 +601,18 @@ class: center, middle
 # ... ou pas en fait
 
 .center[<iframe src="https://giphy.com/embed/3ohs7XbAurbpO5jIBy" width="480" height="267" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
+
+---
+
+# Petite pause mise en pratique
+
+**Objectif** : Mettre en place une API permettant d'accéder au contenu de fichier CSV
+
+Vous avez [https://github.com/ue22-p23/network-frontend-apitester](https://github.com/ue22-p23/network-frontend-apitester) un frontend tout fait !
+
+Et vous avez [https://github.com/ue22-p23/network-backend-api-skeleton](https://github.com/ue22-p23/network-backend-api-skeleton) un backend à compléter
+
+L'api du backend doit **impérativement** respecter les routes documentées dans le README.
 
 ---
 
@@ -440,53 +717,6 @@ class: center, middle
 # Et maintenant c'est fini ?
 
 .center[<iframe src="https://giphy.com/embed/I1nwVpCaB4k36" width="400" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe>]
-
----
-
-# Pause Exercice
-
-Objectif :
-
-.center[Mettre en place un serveur HTTP qui sait gérer une requête POST et une requête GET]
-
-Use-case :
-
-1. Je fais une requête POST sur ̀`votre-url/api/register` dans laquelle je peux mettre un json de la forme `{name: "Basile", secret: "A secret token"}`
-2. Vorte serveur doit stoker l'information (à tout hasard dans un dictionnaire)
-3. Je peux faire une requête GET sur `votre-url/info/<name>` qui doit me renvoyer un bout de html de la forme
-
-```html
-<h1>Hello NameFromPOST your token is TokenFromPOST</h1>
-<h2>We are Student X, Student Y, ...</h2>
-```
-
-.cols[
-.fifty[
-Mettez vous par groupe de 2~3 et vous avez **30 minutes max**.
-
-.center[A la fin envoyez moi l'url de votre serveur et on test en réel !]
-]
-.fifty[
-
-````python
-import requests
-import sys
-
-url = "your url"
-name = "Sponge Bob"
-token = "un truc au pif"
-### POST
-resp = requests.post(f"{url}/api/register",
-           json={"name": name, "token": token})
-if resp.status_code != 200:
-    print("Y a un problème dans le post")
-    sys.exit(1)
-### GET
-resp = requests.get(f"{url}/info/{name}")
-print(resp.content.decode())
-    ```
-]
-]
 
 ---
 
@@ -703,7 +933,7 @@ socket.onclose = function (event) {
 socket.onerror = function (error) {
   alert(`[error] ${error.message}`);
 };
-````
+```
 
 ]
 .fifty[
@@ -742,16 +972,6 @@ C'est lié à la programmation asynchrone. Pour plus de détail je vous encourag
 
 .center[
 <img src="/static/media/qrcode/tornado.png" width="30%">
-]
-
----
-
-# Un mot sur les Framework
-
-<br><br><br>
-
-.center[
-<img src="/static/media/framework.png" width="80%">
 ]
 
 ---
