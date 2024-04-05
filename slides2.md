@@ -222,7 +222,7 @@ Coût plus faible pour les fournisseurs car ils peuvent optimiser l'utilisation 
 .cols[
 .fifty[
 
-<iframe src="http://cpp.bmarchand.fr/controlSection.html" width="100%" height="400" frameBorder="0"></iframe>
+<iframe src="https://cpp.bmarchand.fr/controlSection.html" width="100%" height="400" frameBorder="0"></iframe>
 
     ]
 
@@ -801,7 +801,7 @@ Attributs de Cookie
 
 - Internautes doivent être informé et donner leur consentement avant le dépôt de certains cookies
   - ❌ Traçage publicitaire / réseaux sociaux
-  - ✔️ Cookie pour dire qu'on refuse les cookies [exemple](http://cpp.bmarchand.fr), panier d'achat, authentification, ...
+  - ✔️ Cookie pour dire qu'on refuse les cookies [exemple](https://cpp.bmarchand.fr), panier d'achat, authentification, ...
 - Recueillir le consentement
   - Bouton refusé aussi visible que celui accepté
   - Possibilité de choisir les cookies
