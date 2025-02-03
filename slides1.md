@@ -35,11 +35,11 @@ layout: true
 <img src="static/media/architecture.png" style="width: 80%;">
 ]
 
-La plupart des systèmes informatiques/services web que vous pouvez utiliser quotidiennement ne sont pas **une** application mais un **ensemble** d'application qui intéragissent entre elles.
+La plupart des systèmes informatiques/services web que vous pouvez utiliser quotidiennement ne sont pas **une** application mais un **ensemble** d'applications qui intéragissent entre elles.
 
 ---
 
-# Premier Use-case
+# Premier use-case
 
 Un élève répond à un questionnaire de satisfaction en ligne et après la soumission de son questionnaire reçoit automatiquement une réponse personnalisée et spécifique selon ses réponses.
 
@@ -74,7 +74,7 @@ Un élève répond à un questionnaire de satisfaction en ligne et après la sou
 
 ---
 
-# Un second use case
+# Un second use-case
 
 .center[
 <button onclick="copyFunction()">Email du support</button>
@@ -113,7 +113,7 @@ class: center, middle
 
 <br><br><br>
 Des **applications** qui peuvent se **contacter**, <br><br> **échanger** des **données**
-<br><br> avec des rêgles clairement établies permettant de **déclencher des actions**
+<br><br> avec des règles clairement établies permettant de **déclencher des actions**
 
 ---
 
