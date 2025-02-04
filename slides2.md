@@ -24,7 +24,7 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>17/02/2023 - <i> Réseaux </i>  </span>
+        <span>2025 - <i> Réseaux </i>  </span>
     </div>
 </div>
 
@@ -608,9 +608,9 @@ class: center, middle
 
 **Objectif** : Mettre en place une API permettant d'accéder au contenu de fichier CSV
 
-Vous avez [https://github.com/ue22-p23/network-frontend-apitester](https://github.com/ue22-p23/network-frontend-apitester) un frontend tout fait !
+Vous avez [https://github.com/ue22-p24/network-frontend-apitester](https://github.com/ue22-p24/network-frontend-apitester) un frontend tout fait !
 
-Et vous avez [https://github.com/ue22-p23/network-backend-api-skeleton](https://github.com/ue22-p23/network-backend-api-skeleton) un backend à compléter
+Et vous avez [https://github.com/ue22-p24/network-backend-api-skeleton](https://github.com/ue22-p24/network-backend-api-skeleton) un backend à compléter
 
 L'api du backend doit **impérativement** respecter les routes documentées dans le README.
 
@@ -889,7 +889,7 @@ Très simplement en fait !
 `ws://mon-super-server.com` ou `wss://mon-super-server.com`
 ]
 
-.center[Une fois la connexion établie <br><br>on doit simplement se mettre en état d'écoute à des évènement particulier]
+.center[Une fois la connexion établie <br><br>on doit simplement se mettre en état d'écoute à des évènements particuliers]
 
 Quatre types d'évènements
 
@@ -955,7 +955,7 @@ await ws.write_message("vive la MMC")
 
 ⚠️ Vous voyez apparaître le mot clé `await` que vous ne connaissez pas en Python 🐍
 
-C'est lié à la programmation asynchrone. Pour plus de détail je vous encourage à faire un tour sur le Mooc
+C'est lié à la programmation asynchrone. Pour plus de détails je vous encourage à faire un tour sur le Mooc
 
 .center[*Python : des fondamentaux aux concepts avancés du langage*]
 

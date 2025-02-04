@@ -23,7 +23,7 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>17/02/2023 - <i> Réseaux </i>  </span>
+        <span>2025 - <i> Réseaux </i>  </span>
     </div>
 </div>
 
@@ -781,8 +781,8 @@ Vous avez peut être remarqué le `GET`dans la requête précédente.
 En gros c'est pour dire que l'on veut faire un requête de type `GET`. Sous-entendu il existe d'autre type de requête ... dans le monde HTTP(S) il existe
 
 - `GET` : requêtes pour **_obtenir_** du serveur une ressource (fichier html/css/js, image, video, données, ...)
-- `POST` : requêtes pour **_envoyer_** des données au serveur en vu d'un traitement (ajout d'un utilisateur dans une base de donnée, ...)
-- `PATCH` : requêtes pour **_modifier partiellement_** une ressource du serveur (mettre à jour l'addresse mail d'un utilisateur dans la base de donnée)
+- `POST` : requêtes pour **_envoyer_** des données au serveur en vu d'un traitement (ajout d'un utilisateur dans une base de données, ...)
+- `PATCH` : requêtes pour **_modifier partiellement_** une ressource du serveur (mettre à jour l'addresse mail d'un utilisateur dans la base de données)
 - `DELETE` : requêtes pour **_supprimer_** une ressource du serveur (supprimer un commentaire sur un article, ... )
 
 Il s'agit là des principaux types de requêtes mais il en existe d'autre, pour la liste complète vous pouvez faire un tour [https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
@@ -997,7 +997,7 @@ Par exemple :
 ]
 
 <br><br>
-.center[demande de support par mail qui provoque une nouvelle entrée dans une base de donnée<br>et une notification par mail si "urgent" dans le sujet du mail 🤯]
+.center[demande de support par mail qui provoque une nouvelle entrée dans une base de données<br>et une notification par mail si "urgent" dans le sujet du mail 🤯]
 
 ---
 
@@ -1005,7 +1005,7 @@ Par exemple :
 
 Je vous ai mis en place un serveur minimaliste offrant une API permettant :
 
-1. Lister l'ensemble des utilisateurs de la base de donnée
+1. Lister l'ensemble des utilisateurs de la base de données
 2. Mettre à jour votre status
 3. Envoyer un message à un utilisateur
 4. Récupérer les messages qui m'ont été envoyés.
@@ -1027,7 +1027,7 @@ L'idée est que vous réalisiez les actions suivantes :
 
 # Application 2 : utilisation de l'API Notion
 
-L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de donnée Notion. **Une squelette est disponible [ici](https://github.com/ue22-p23/notion-api-demo-skeleton)**. L'application à terme doit pouvoir :
+L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de données Notion. **Une squelette est disponible [ici](https://github.com/ue22-p24/notion-api-demo-skeleton)**. L'application à terme doit pouvoir :
 
 .cols[
 .fifty[
@@ -1054,12 +1054,12 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 ]
 
 .fifty[
-**Step 3️⃣** : ajouter la base de donnée à l'intégration créée précédemment
-.center[depuis la page de la base de donnée]
+**Step 3️⃣** : ajouter la base de données à l'intégration créée précédemment
+.center[depuis la page de la base de données]
 
 <img src="/static/media/notion-db-to-integ.png" width="20%">
 
-**Step 4️⃣** : récuper l'ID de la base de donnée
+**Step 4️⃣** : récuper l'ID de la base de données
 
 <img src="/static/media/notion-db-id.png" width="80%">
 

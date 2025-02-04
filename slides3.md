@@ -24,7 +24,7 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>22/03/2023 - <i> Flask </i>  </span>
+        <span>2025 - <i> Flask </i>  </span>
     </div>
 </div>
 
