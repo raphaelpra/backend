@@ -21,7 +21,7 @@ h3 {
 }
 
 h1 {
-  font-weight: 500;
+  font-weight: 400;
 }
 
 .slide_title.remark-slide-content > h1 {
@@ -29,16 +29,16 @@ h1 {
 }
 
 .slide_title.remark-slide-content > h2 {
-  font-size: 45px;
+  font-size: 40pt;
 }
 
 .remark-slide-content > h1 {
-  font-size: 30pt;
+  font-size: 40pt;
 }
 
 h2,
 h3 {
-  font-weight: lighter;
+  font-weight: 200;
   margin-top: 0.1em;
   margin-bottom: 0.1em;
 }
