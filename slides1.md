@@ -225,7 +225,7 @@ Par exemple votre ordinateur portable possède deux interfaces réseau : la pris
 --
 
 <div style="position: absolute; left: 30%; top: 65%">
-  <p> Au niveau de chaque sous-domaines : </p>
+  <p> Au niveau de chaque sous-domaine : </p>
   <ul>
     <li>Opérations algébriques distribuées </li>
     <li>Résolution de problèmes locaux (solveurs DD)</li>
