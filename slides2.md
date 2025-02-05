@@ -57,7 +57,7 @@ layout: true
 .fifty[
 Un modèle OSI en 7 couches
 
-.center[<img src="static/media/adresseip.png" width="30%">]
+.center[<img src="static/media/adresseip.png" width="20%">]
 
 Un protocole HTTP(S) pour le web
 
@@ -351,7 +351,7 @@ Possible de voir les requêtes et réponses dans votre navigateur via
 ]
 
 .center[
-<img src="static/media/qrcode/http_server.png" width="30%">
+<img src="static/media/qrcode/http_server.png" width="20%">
 ]
 
 📢 ⚠️ On regarde le fichier `minimal_server.py`
@@ -409,7 +409,7 @@ car définit la manière dont le serveur va traiter la requête.
 ]
 
 .center[
-<img src="static/media/qrcode/http_server.png" width="30%">
+<img src="static/media/qrcode/http_server.png" width="20%">
 ]
 
 📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`
@@ -814,7 +814,7 @@ Attributs de Cookie
 .center[[http://bit.ly/410qbdD](http://bit.ly/410qbdD)]
 
 .center[
-<img src="static/media/qrcode/cookie.png" width="30%">
+<img src="static/media/qrcode/cookie.png" width="20%">
 ]
 
 ---
@@ -971,7 +971,7 @@ C'est lié à la programmation asynchrone. Pour plus de détails je vous encoura
 .center[[http://bit.ly/3xu599H](http://bit.ly/3xu599H)]
 
 .center[
-<img src="static/media/qrcode/tornado.png" width="30%">
+<img src="static/media/qrcode/tornado.png" width="20%">
 ]
 
 ---

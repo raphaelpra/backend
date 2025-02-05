@@ -519,7 +519,7 @@ Clotûre en 4 étapes
 <br>ou<br>
 [http://bit.ly/3HHQ49i](http://bit.ly/3HHQ49i)
 <br>ou<br>
-<img src="static/media/qrcode/tcp_qrcode.png" width=30%>
+<img src="static/media/qrcode/tcp_qrcode.png" width="20%">
 ]
 
 ---
@@ -863,7 +863,7 @@ On trouve en ligne plein d'API ouverte un lien pour avoir une liste non exhausti
 ou <br>
 [http://bit.ly/3YHC1qX](http://bit.ly/3YHC1qX) <br>
 ou <br>
-<img src="static/media/qrcode/public_api_qr.png" width="30%">
+<img src="static/media/qrcode/public_api_qr.png" width="20%">
 ]
 
 ---
