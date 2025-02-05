@@ -126,7 +126,7 @@ On va regarder les plus classiques
 
 ## Architecture pair à pair
 
-.center[<img src="static/media/PeerToPeer.png" style="width: 50%;">]
+.center[<img src="static/media/peer-to-peer.png" style="width: 50%;">]
 
 Très à la mode à une époque où Netflix/Amazon Prime/... n'existaient pas (oui oui cette période est réelle 🤯)
 
@@ -180,11 +180,11 @@ Par exemple votre ordinateur portable possède deux interfaces réseau : la pris
 ## Supercalculateur : un modèle peer-to-peer
 
 <div style="position: absolute; left: 10%; top: 25%;">
-<img src="/static/media/cluster1.jpg" width="300px">
+<img src="static/media/cluster1.jpg" width="300px">
 </div>
 
 <div style="position: absolute; left: 35%; top: 35%;">
-<img src="/static/media/cluster2.jpg" width="300px">
+<img src="static/media/cluster2.jpg" width="300px">
 </div>
 
 <div style="position: absolute; left: 55%; top: 55%;">
@@ -519,7 +519,7 @@ Clotûre en 4 étapes
 <br>ou<br>
 [http://bit.ly/3HHQ49i](http://bit.ly/3HHQ49i)
 <br>ou<br>
-<img src="/static/media/qrcode/tcp_qrcode.png" width=30%>
+<img src="static/media/qrcode/tcp_qrcode.png" width=30%>
 ]
 
 ---
@@ -568,7 +568,7 @@ UDP = rapide mais peu fiable
 Les applications :
 
 .center[
-<img src="/static/media/udp-applications.svg" width=60%>
+<img src="static/media/udp-applications.svg" width=60%>
 ]
 
 ---
@@ -588,7 +588,7 @@ Les applications :
 .center[[https://replit.com/@BasileMarchand/tcpexample?v=1](https://replit.com/@BasileMarchand/tcpexample?v=1) <br> ou <br>
 [http://bit.ly/3YpoKDR](http://bit.ly/3YpoKDR)
 <br>ou<br>
-<img src="/static/media/qrcode/tcp_qrcode.png" width="20%">
+<img src="static/media/qrcode/tcp_qrcode.png" width="20%">
 ]
 
 ---
@@ -629,7 +629,7 @@ Par exemple les informations d'une personne :
 # Sérialisation JSON
 
 .center[
-<img src="/static/media/serialization-json.svg" width="90%">
+<img src="static/media/serialization-json.svg" width="90%">
 ]
 
 --
@@ -686,7 +686,7 @@ On parle de protocole :
 Format d'une requête
 
 .center[
-<img src="/static/media/http-request.svg" width="60%">
+<img src="static/media/http-request.svg" width="60%">
 ]
 
 ---
@@ -723,7 +723,7 @@ Nous allons utiliser le site [http://httpbin.org](http://httpbin.org) qui met à
 .center[
 [http://bit.ly/3XmaLNE](http://bit.ly/3XmaLNE)
 <br> or <br>
-<img src="/static/media/qrcode/reqests_qrcode.png" width="20%">
+<img src="static/media/qrcode/reqests_qrcode.png" width="20%">
 ]
 
 ---
@@ -758,7 +758,7 @@ Dans le domaine particulier du Web l'API se définit en fait à partir d'une URL
 
 --
 
-.center[<img src="/static/media/api_img.jpg" width="60%">]
+.center[<img src="static/media/api_img.jpg" width="60%">]
 
 .footnote[Image from Jérémy Mésière, Architecte Middleware chez Manutan]
 
@@ -863,7 +863,7 @@ On trouve en ligne plein d'API ouverte un lien pour avoir une liste non exhausti
 ou <br>
 [http://bit.ly/3YHC1qX](http://bit.ly/3YHC1qX) <br>
 ou <br>
-<img src="/static/media/qrcode/public_api_qr.png" width="30%">
+<img src="static/media/qrcode/public_api_qr.png" width="30%">
 ]
 
 ---
@@ -880,7 +880,7 @@ Considérons par exemple le cas d'un serveur générant des listes de nombres al
 .center[
 [http://bit.ly/3HONIFN](http://bit.ly/3HONIFN)
 <br> ou <br>
-<img src="/static/media/qrcode/random_number.png" width="20%">
+<img src="static/media/qrcode/random_number.png" width="20%">
 
 ]
 
@@ -905,7 +905,7 @@ Considérons par exemple le cas d'un serveur générant des listes de nombres al
 Depuis quelques années de plus en plus à la mode: **No Code**, **Low Code**
 
 .center[
-<img src="/static/media/make.png" width="50%">
+<img src="static/media/make.png" width="50%">
 ]
 
 <br><br>
@@ -961,7 +961,7 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 **Step 2️⃣** : créer une intégration Notion
 .center[Se rendre sur le site [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations) et créer une intégration]
 
-<img src="/static/media/notion-token.png" width="60%">
+<img src="static/media/notion-token.png" width="60%">
 
 ]
 
@@ -969,11 +969,11 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 **Step 3️⃣** : ajouter la base de données à l'intégration créée précédemment
 .center[depuis la page de la base de données]
 
-<img src="/static/media/notion-db-to-integ.png" width="20%">
+<img src="static/media/notion-db-to-integ.png" width="20%">
 
 **Step 4️⃣** : récuper l'ID de la base de données
 
-<img src="/static/media/notion-db-id.png" width="80%">
+<img src="static/media/notion-db-id.png" width="80%">
 
 ]
 ]

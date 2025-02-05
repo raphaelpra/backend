@@ -57,12 +57,12 @@ layout: true
 .fifty[
 Un modèle OSI en 7 couches
 
-.center[<img src="/static/media/adresseip.png" width="30%">]
+.center[<img src="static/media/adresseip.png" width="30%">]
 
 Un protocole HTTP(S) pour le web
 
 .center[
-<img src="/static/media/http_request.png" width="60%">
+<img src="static/media/http_request.png" width="60%">
 ]
 
 ]
@@ -73,7 +73,7 @@ Un protocole HTTP(S) pour le web
 # Quel est le rôle du serveur ?
 
 .center[
-<img src="/static/media/ClientServer.png" width="60%">
+<img src="static/media/ClientServer.png" width="60%">
 ]
 
 --
@@ -118,13 +118,13 @@ class: center, middle
 .center[Serveur physique vs serveur virtuel (VPS) ]
 
 <div style="position: absolute; bottom: 15%; left: 15%">
-<img src="/static/media/baremetal.png" width="80%">
+<img src="static/media/baremetal.png" width="80%">
 </div>
 
 --
 
 <div style="position: absolute; bottom: 15%; right: 10%">
-<img src="/static/media/vps.png" width="80%">
+<img src="static/media/vps.png" width="80%">
 </div>
 
 --
@@ -140,7 +140,7 @@ Différentes solutions : On Premise vs Cloud (OVH, Azure, GCP, AWS, ... )
 ## Le serveur "software"
 
 .center[
-<img src="/static/media/server_app.png" width="80%">
+<img src="static/media/server_app.png" width="80%">
 ]
 
 C'est l'application (au sens logiciel) qui va s'occuper de
@@ -157,7 +157,7 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 
 .center[OUI 🎯 il suffit de se partager le port 80 🤝]
 
-.center[<img src="/static/media/virtualhost.png" width="80%">]
+.center[<img src="static/media/virtualhost.png" width="80%">]
 
 --
 
@@ -166,11 +166,11 @@ Différentes solutions : Apache (40%), Nginx (20%), IIS (10%), ...
 --
 
 <div style="position: absolute; top: 30%; left:15%">
-<img src="/static/media/config_mines.png" width="40%">
+<img src="static/media/config_mines.png" width="40%">
 </div>
 
 <div style="position: absolute; top: 30%; left:55%">
-<img src="/static/media/config_cpp.png" width="70%">
+<img src="static/media/config_cpp.png" width="70%">
 </div>
 
 ---
@@ -246,7 +246,7 @@ Coût plus faible pour les fournisseurs car ils peuvent optimiser l'utilisation 
 <br><br>
 
 .center[
-<a href="http://cpp.bmarchand.fr" target="_blank"> <img src="/static/media/site_statique.png" width="100%"></a>
+<a href="http://cpp.bmarchand.fr" target="_blank"> <img src="static/media/site_statique.png" width="100%"></a>
 ]
 
 ---
@@ -257,7 +257,7 @@ Coût plus faible pour les fournisseurs car ils peuvent optimiser l'utilisation 
 
 .center[
 <a href="http://bmarchand.fr/research/activities" target="_blank">
-<img src="/static/media/dynamic_site1.png" width="60%">
+<img src="static/media/dynamic_site1.png" width="60%">
 </a>
 ]
 
@@ -265,7 +265,7 @@ Coût plus faible pour les fournisseurs car ils peuvent optimiser l'utilisation 
 
 .center[
 <a href="https://rep.mines-paristech.fr" target="_blank">
-<img src="/static/media/cerebro.png" width="50%">
+<img src="static/media/cerebro.png" width="50%">
 </a>
 ]
 
@@ -310,7 +310,7 @@ Attention en revanche :
 
 # Le serveur web : un besoin de perf 🚀
 
-.center[<img src="/static/media/clients.png" width="80%">]
+.center[<img src="static/media/clients.png" width="80%">]
 
 <div style="position: absolute; bottom: 15s%; right: 10%;">
   .center[Comment faire pour que tout le monde <br><br>ait une réponse en un temps raisonnable ?<br>
@@ -321,7 +321,7 @@ Attention en revanche :
 
 # Solutions techniques
 
-.center[<img src="/static/media/concurency.png" width="70%">]
+.center[<img src="static/media/concurency.png" width="70%">]
 
 .center[Utilisation du parallélisme de tâches processus/thread et/ou programmation asynchrone]
 
@@ -331,10 +331,10 @@ Attention en revanche :
 
 .cols[
 .fifty[
-.center[<img src="/static/media/http_request.png" width="100%">]
+.center[<img src="static/media/http_request.png" width="100%">]
 ]
 .fifty[
-.center[<img src="/static/media/response_format.png" width="100%">]
+.center[<img src="static/media/response_format.png" width="100%">]
 ]
 ]
 
@@ -351,7 +351,7 @@ Possible de voir les requêtes et réponses dans votre navigateur via
 ]
 
 .center[
-<img src="/static/media/qrcode/http_server.png" width="30%">
+<img src="static/media/qrcode/http_server.png" width="30%">
 ]
 
 📢 ⚠️ On regarde le fichier `minimal_server.py`
@@ -409,7 +409,7 @@ car définit la manière dont le serveur va traiter la requête.
 ]
 
 .center[
-<img src="/static/media/qrcode/http_server.png" width="30%">
+<img src="static/media/qrcode/http_server.png" width="30%">
 ]
 
 📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`
@@ -453,7 +453,7 @@ Ensemble de programmes effectuant des opérations spécifiques, que vous allez u
 Par exemple `NumPy` en Python 🐍 est une librairie
 
 .center[
-<img src="/static/media/library.png" width="70%">
+<img src="static/media/library.png" width="70%">
 ]
 
 ]
@@ -468,7 +468,7 @@ Cadre de développement dans lequel le développeur vient s'inscrire, i.e. déve
 Un code à trou 🕳️ en quelque sorte
 
 .center[
-<img src="/static/media/framework_concept.png" width="70%">
+<img src="static/media/framework_concept.png" width="70%">
 ]
 
 ]
@@ -487,7 +487,7 @@ Un code à trou 🕳️ en quelque sorte
 
 .center[
 
-  <img src="/static/media/framework_frontend.png" width=50%>
+  <img src="static/media/framework_frontend.png" width=50%>
 ]
 
 Focalisé sur le développement d'application côté client.
@@ -500,7 +500,7 @@ Focalisé sur le développement d'application côté client.
 
 .center[
 
-  <img src="/static/media/framework_backend.png" width=100%>
+  <img src="static/media/framework_backend.png" width=100%>
 ]
 
 Focalisé sur le développement côté serveur
@@ -513,7 +513,7 @@ Focalisé sur le développement côté serveur
 # Les grands principes des framework backend
 
 .center[
-<img src="/static/media/framework_routes.png" width=100%>
+<img src="static/media/framework_routes.png" width=100%>
 ]
 
 A cela un framework complet ajoute des fonctionnalités de :
@@ -526,7 +526,7 @@ A cela un framework complet ajoute des fonctionnalités de :
 Micro-framework Python 🐍 développé depuis 2010.
 <br><br>
 .center[
-<img src="/static/media/logos/logo_flask.png" width=40% />
+<img src="static/media/logos/logo_flask.png" width=40% />
 ]
 <br><br>
 🚧 Micro-framework ne veut pas dire pas utilisable sur des gros projets ⚠️
@@ -635,7 +635,7 @@ Enrobage du protocôle HTTP dans une couche de chiffrement <br><br><br>
 pour garantir la sécurité de l'utilisateur
 ]
 
-.center[<img src="/static/media/https.jpg" width="40%">]
+.center[<img src="static/media/https.jpg" width="40%">]
 
 ---
 
@@ -675,11 +675,11 @@ pour garantir la sécurité de l'utilisateur
 
 .cols[
 .fifty[
-<img src="/static/media/http_not_safe.png" width="100%">
+<img src="static/media/http_not_safe.png" width="100%">
 ]
 .fifty[
 
-<img src="/static/media/https_safe.png" width="100%">
+<img src="static/media/https_safe.png" width="100%">
 
 ]
 ]
@@ -693,7 +693,7 @@ pour garantir la sécurité de l'utilisateur
 En pratique le chiffrement fonctionne avec un système clé publique/clé privée
 
 .center[
-<img src="/static/media/tls.png" width="60%">
+<img src="static/media/tls.png" width="60%">
 ]
 
 ---
@@ -704,11 +704,11 @@ En pratique le chiffrement fonctionne avec un système clé publique/clé privé
 
 Possible de générer ses propres certificat soi-même mais ils ne sont pas considérés comme valide par les clients standards.
 
-.center[<img src="/static/media/logos/openssl.png" width="20%">]
+.center[<img src="static/media/logos/openssl.png" width="20%">]
 
 Pour générer des certificats gratuitement il existe l'initiative **Let's Encrypt**
 
-.center[<img src="/static/media/logos/letsencrypt.png" width="30%">]
+.center[<img src="static/media/logos/letsencrypt.png" width="30%">]
 
 ---
 
@@ -742,16 +742,16 @@ Un 🍪 HTTP c'est
 
 .cols[
 .fifty[
-<img src="/static/media/cookie1.png" width="100%">
+<img src="static/media/cookie1.png" width="100%">
 ]
 .fifty[
-<img src="/static/media/cookie2.png" width="100%">
+<img src="static/media/cookie2.png" width="100%">
 ]
 ]
 
 .center[stockée sur le client (dans le navigateur) <br> **renvoyée** au serveur à chaque nouvelle requête]
 
-.center[ <img src="/static/media/cookie3.png" width="40%">]
+.center[ <img src="static/media/cookie3.png" width="40%">]
 
 ---
 
@@ -796,7 +796,7 @@ Attributs de Cookie
 
 # Quelques rêgles à suivre
 
-.center[<img src="/static/media/logos/cnil.jpg" width="30%">]
+.center[<img src="static/media/logos/cnil.jpg" width="30%">]
 .center[https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies)
 
 - Internautes doivent être informé et donner leur consentement avant le dépôt de certains cookies
@@ -814,7 +814,7 @@ Attributs de Cookie
 .center[[http://bit.ly/410qbdD](http://bit.ly/410qbdD)]
 
 .center[
-<img src="/static/media/qrcode/cookie.png" width="30%">
+<img src="static/media/qrcode/cookie.png" width="30%">
 ]
 
 ---
@@ -833,7 +833,7 @@ Attributs de Cookie
 
 .cols[
 .thirty[
-<img src="/static/media/http.png" width="80%">
+<img src="static/media/http.png" width="80%">
 ]
 .sixty[
 
@@ -848,10 +848,10 @@ Impossible pour le serveur d'être à l'origine de l'échange
 
 .cols[
 .fifty[
-<img src="/static/media/limitation1.png" width="100%">
+<img src="static/media/limitation1.png" width="100%">
 ]
 .fifty[
-<img src="/static/media/limitation2.png" width="100%">
+<img src="static/media/limitation2.png" width="100%">
 
 ]
 
@@ -875,7 +875,7 @@ Impossible pour le serveur d'être à l'origine de l'échange
 ]
 ]
 .fifty[
-.center[<img src="/static/media/ws.png" width="70%">]
+.center[<img src="static/media/ws.png" width="70%">]
 ]
 ]
 
@@ -971,7 +971,7 @@ C'est lié à la programmation asynchrone. Pour plus de détails je vous encoura
 .center[[http://bit.ly/3xu599H](http://bit.ly/3xu599H)]
 
 .center[
-<img src="/static/media/qrcode/tornado.png" width="30%">
+<img src="static/media/qrcode/tornado.png" width="30%">
 ]
 
 ---

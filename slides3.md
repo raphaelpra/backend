@@ -57,23 +57,23 @@ layout: true
 .fifty[
 Un modèle OSI en 7 couches
 
-.center[<img src="/static/media/adresseip.png" width="30%">]
+.center[<img src="static/media/adresseip.png" width="30%">]
 
 Un protocole HTTP(S) pour le web
 
 .center[
-<img src="/static/media/http_request.png" width="60%">
+<img src="static/media/http_request.png" width="60%">
 ]
 
 ]
 ]
 
 <div style="position: absolute; bottom: 5%; left: 40%;">
-<img src="/static/media/serveur_recap.png" width="400px">
+<img src="static/media/serveur_recap.png" width="400px">
 </div>
 
 <div style="position: absolute; bottom: 15%; left: 80%;">
-<img src="/static/media/logos/letsencrypt.png" width="200px">
+<img src="static/media/logos/letsencrypt.png" width="200px">
 </div>
 
 <div style="position: absolute; bottom: 0%; left: 75%;">
@@ -115,7 +115,7 @@ Ensemble de programmes effectuant des opérations spécifiques, que vous allez u
 Par exemple `NumPy` en Python 🐍 est une librairie
 
 .center[
-<img src="/static/media/library.png" width="70%">
+<img src="static/media/library.png" width="70%">
 ]
 
 ]
@@ -130,7 +130,7 @@ Cadre de développement dans lequel le développeur vient s'inscrire, i.e. déve
 Un code à trou 🕳️ en quelque sorte
 
 .center[
-<img src="/static/media/framework_concept.png" width="70%">
+<img src="static/media/framework_concept.png" width="70%">
 ]
 
 ]
@@ -149,7 +149,7 @@ Un code à trou 🕳️ en quelque sorte
 
 .center[
 
-  <img src="/static/media/framework_frontend.png" width=50%>
+  <img src="static/media/framework_frontend.png" width=50%>
 ]
 
 Focalisé sur le développement d'application côté client.
@@ -162,7 +162,7 @@ Focalisé sur le développement d'application côté client.
 
 .center[
 
-  <img src="/static/media/framework_backend.png" width=100%>
+  <img src="static/media/framework_backend.png" width=100%>
 ]
 
 Focalisé sur le développement côté serveur
@@ -177,7 +177,7 @@ Dans le cadre de ce cours on ne se focalisera que sur le côté `backend`
 # Les grands principes des framework backend
 
 .center[
-<img src="/static/media/framework_routes.png" width=100%>
+<img src="static/media/framework_routes.png" width=100%>
 ]
 
 A cela un framework complet ajoute des fonctionnalités de :
@@ -190,7 +190,7 @@ A cela un framework complet ajoute des fonctionnalités de :
 Micro-framework Python 🐍 développé depuis 2010.
 <br><br>
 .center[
-<img src="/static/media/logos/logo_flask.png" width=40% />
+<img src="static/media/logos/logo_flask.png" width=40% />
 ]
 <br><br>
 🚧 Micro-framework ne veut pas dire pas utilisable sur des gros projets ⚠️
@@ -216,7 +216,7 @@ Micro-framework car noyau très léger et minimaliste mais pouvant être enrichi
 .center[
 
 <figure>
-<img src="/static/media/web_framework_survey.png" width="60%"/><br>
+<img src="static/media/web_framework_survey.png" width="60%"/><br>
 <label style="font-size: x-small"> Source: <a href="https://www.jetbrains.com/lp/devecosystem-2022/python/">https://www.jetbrains.com/lp/devecosystem-2022/python/</a>
 </figure>
 ]
@@ -257,7 +257,7 @@ Deux approches :
 Utilisation de librairies graphiques et développement d'un client lourd
 
 .center[
-<img src="/static/media/qt_fltk.png" width=50%>
+<img src="static/media/qt_fltk.png" width=50%>
 ]
 
 ]
@@ -268,7 +268,7 @@ Utilisation de librairies graphiques et développement d'un client lourd
 Utilisation du navigateur
 
 .center[
-<img src="/static/media/html_css_js.png" width=80%>
+<img src="static/media/html_css_js.png" width=80%>
 ]
 
 ]
@@ -352,7 +352,7 @@ app.run(debug=True, port=3001)
 .fourty[
 [http://bit.ly/3Z5C5k7](http://bit.ly/3Z5C5k7)
 
-.center[<img src="/static/media/qrcode/flask_sandbox.png" width="60%">]
+.center[<img src="static/media/qrcode/flask_sandbox.png" width="60%">]
 ]
 ]
 
@@ -453,7 +453,7 @@ def handler():
 Possibilité offerte par Flask de définir des paramètres au sein même d'une URL
 
 .center[
-<img src="/static/media/route_param.png" width=70%>
+<img src="static/media/route_param.png" width=70%>
 ]
 
 .cols[
@@ -494,7 +494,7 @@ Possibilité pour les deux d'ajouter un paramètre `n` par exemple `?n=10` pour 
 ]
 
 .center[
-<img src="/static/media/qrcode/flask_random_api.png" width="20%">
+<img src="static/media/qrcode/flask_random_api.png" width="20%">
 ]
 
 ---
@@ -510,7 +510,7 @@ Petit rappel du 1er épisode, HTTP différentes requêtes possibles
 
 Il s'agit là des principaux types de requêtes mais il en existe d'autre, pour la liste complète vous pouvez faire un tour [https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol](https://fr.wikipedia.org/wiki/Hypertext_Transfer_Protocol).
 
-.center[<img src="/static/media/api_img.jpg" width="40%">]
+.center[<img src="static/media/api_img.jpg" width="40%">]
 
 .footnote[Image from Jérémy Mésière, Architecte Middleware chez Manutan]
 
@@ -563,7 +563,7 @@ Plusieurs méthodes à disposition :
 [http://bit.ly/40ly786](http://bit.ly/40ly786)
 
 .center[
-<img src="/static/media/qrcode/flask_post.png" width="20%">
+<img src="static/media/qrcode/flask_post.png" width="20%">
 ]
 
 ---
@@ -606,7 +606,7 @@ Pour le cas de pages dynamiques deux approches existent
 ]
 
 .center[
-<img src="/static/media/qrcode/flask_ssr_vs_csr.png" width="30%">
+<img src="static/media/qrcode/flask_ssr_vs_csr.png" width="30%">
 ]
 
 Il faut être curieu et ouvrir l'onglet "Network" des outils de développement du navigateur !
@@ -615,14 +615,14 @@ Il faut être curieu et ouvrir l'onglet "Network" des outils de développement d
 
 # Approche CSR
 
-.center[<img src="/static/media/csr.png" width=80%>]
+.center[<img src="static/media/csr.png" width=80%>]
 
 ---
 
 # Approche SSR
 
 .center[
-<img src="/static/media/ssr.png" width=75%>
+<img src="static/media/ssr.png" width=75%>
 ]
 
 .center[
@@ -636,7 +636,7 @@ Besoin d'un mécanisme de ***génération de page HTML***
 Mécanisme de génération de page HTML à partir d'un modèle et de données.
 
 .center[
-<img src="/static/media/template_engine.png" width="50%">
+<img src="static/media/template_engine.png" width="50%">
 ]
 
 Plusieurs techno/solutions :
@@ -906,7 +906,7 @@ def login():
 
 [http://bit.ly/3JyTBb2](http://bit.ly/3JyTBb2)
 
-.center[<img src="/static/media/qrcode/flask_form.png" width="20%">]
+.center[<img src="static/media/qrcode/flask_form.png" width="20%">]
 
 ---
 
@@ -943,7 +943,7 @@ Par exemple, nombre de fois qu'on visite une page !
 [http://bit.ly/408GbcF](http://bit.ly/408GbcF)
 
 .center[
-<img src="/static/media/qrcode/flask_cookie.png" width="20%">
+<img src="static/media/qrcode/flask_cookie.png" width="20%">
 ]
 
 ---
@@ -995,7 +995,7 @@ def index():
 ]
 
 <div style="position: absolute; top: 10%; right: 5%">
-<img src="/static/media/qrcode/flask_session_demo.png" width="200px">
+<img src="static/media/qrcode/flask_session_demo.png" width="200px">
 </div>
 
 ---
@@ -1013,7 +1013,7 @@ Petit rappel au cas où ...
 ]
 ]
 .fifty[
-.center[<img src="/static/media/ws.png" width="70%">]
+.center[<img src="static/media/ws.png" width="70%">]
 ]
 ]
 
@@ -1110,7 +1110,7 @@ socket.on("the_response", (msg) => {
 ]
 
 <div style="position: absolute; bottom: 5%; left: 40%">
-<img src="/static/media/qrcode/flask_socketio.png" width="200px">
+<img src="static/media/qrcode/flask_socketio.png" width="200px">
 </div>
 
 ---
