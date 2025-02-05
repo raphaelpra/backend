@@ -126,7 +126,7 @@ On va regarder les plus classiques
 
 ## Architecture pair à pair
 
-.center[<img src="static/media/peer-to-peer.png" style="width: 50%;">]
+.center[<img src="static/media/peer-to-peer.svg" style="width: 50%;">]
 
 Très à la mode à une époque où Netflix/Amazon Prime/... n'existaient pas (oui oui cette période est réelle 🤯)
 
@@ -295,7 +295,7 @@ C'est ce qu'on appelle l'adresse IP, pour _Internet Protocol_. L'adresse IP d'un
 
 --
 
-**Remarque :** en 2011 💣 **l'épuisement des adresse IP** disponibles...
+**Remarque :** en 2011 💣 **l'épuisement des adresses IP** disponibles...
 
 .center[Il a donc été mis en place le protocol IP v6 (l'ancien protocole était le v4)]
 
