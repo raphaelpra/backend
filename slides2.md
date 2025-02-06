@@ -378,6 +378,7 @@ puis ouvrez dans votre navigateur `http://localhost:8000/index.html`
   📢 ⚠️ On regarde le fichier `minimal_server.py`
 
   ```bash
+  $ cd python/
   $ python minimal_server.py
   ```
 ]
@@ -401,34 +402,6 @@ httpd.serve_forever()
 <!-- [http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
 
 <img src="static/media/qrcode/http_server.png" width="20%"> -->
-
----
-
-# (Au passage c'est quoi mon IP ?)
-
-Quand je suis un serveur comment je fais pour connaitre mon IP ?
-
-Il suffit de demander à TEST-NET-1,2,3 :
-
-.center[192.0.2.0 ou 198.51.100.0 ou 203.0.113.0]
-
-```python
-import socket
-def find_my_ip():
-    candidates = []
-    for test_ip in ["192.0.2.0", "198.51.100.0", "203.0.113.0"]:
-        s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-        s.connect((test_ip, 80))
-        ip_addr = s.getsockname()[0]
-        s.close()
-        if ip_addr in candidates:
-            return ip_addr
-        candidates.append(ip_addr)
-
-    return candidates[0]
-```
-
-⚠️ `socket.SOCK_DGRAM` connexion via UDP et pas TCP
 
 ---
 

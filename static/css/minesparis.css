@@ -89,6 +89,10 @@ div.slide_footer span {
   font-style: italic;
 }
 
+.smaller {
+  font-size: smaller;
+}
+
 div.references {
   position: absolute;
   bottom: 5%;

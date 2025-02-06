@@ -293,9 +293,11 @@ C'est ce qu'on appelle l'adresse IP, pour _Internet Protocol_. L'adresse IP d'un
 <br><br>
 .center[<img src="static/media/ip-address.svg" style="width: 30%;">]
 
+.footnote.smaller[
 il y a donc deux parties : l'adresse du réseau (souvent sur 24 bits) et l'adresse de l'hôte (souvent sur 8 bits)  
 lorsqu'on a besoin d'écrire l'adresse d'un réseau on écrit alors comme ceci le nombre de bits de l'adresse réseau
 .center[<img src="static/media/ip-address-subnet.svg" style="width: 30%;">]
+]
 
 ---
 
@@ -312,9 +314,12 @@ Le principe est simple: passer d'une adresse sur **32 bits** à une adresse sur 
 par exemple (en hexa) `2001:0db8:0000:85a3:0000:0000:ac1f:8001`  
 En fait on a tellement d'adresses que l'on peut donner une adresse IP à chaque grain de sable sur terre 🏖  ️
 
-Actuellement déployé en partie - principalement, mais pas que, dans le coeur du réseau chez les opérateurs  
+<br>
+Actuellement déployé **mais en partie** - principalement, mais pas que, dans le coeur de réseau chez les opérateurs
 
-Notamment le besoin de IPv6 est moins important que prévu grâce notamment au NAT
+Et pourquoi pas partout, me direz-vous ?  
+eh bien notamment, le besoin de IPv6 est moins important que prévu grâce notamment au NAT  
+on en reparlera...
 
 ---
 
@@ -349,13 +354,118 @@ gère trois éléments :
 
 - Routage
   .center[
-  chemin entre deux machines dans des réseaux différents, <br>chemin passant par les passerelles : ces fameuses machines ayant des interfaces dans deux réseaux distincts.
+  chemin entre deux machines dans des réseaux différents, <br>chemin passant par les passerelles (routeurs)<br>ces fameuses machines ayant des interfaces dans deux réseaux distincts.
   ]
 - Relayage
   .center[s'occupe, une fois la route déterminée, <br>de faire transiter l'information de la machine A à la machine B]
 
 - Contrôle de flux
   .center[une fonctionnalité optionnelle mais néanmoins essentielle <br> qui permet de décongestionner l'ensemble du réseau (au sens large). <br>Un peu le Waze du transit de données]
+
+---
+name: my-ip-address
+
+## (Au passage c'est quoi mon IP ?)
+
+.cols[
+
+.fifty[
+Comment je fais pour connaitre mon IP ?
+
+pour commencer je clone le cours (si ce n'est déjà fait)  
+et je me rends dans le dossier `python`
+]
+
+.fifty[
+```sh
+# dans votre terminal:
+git clone https://github.com/ue22-p24/backend/
+cd backend
+
+cd python
+```
+]
+]
+
+.cols[
+.fitfy[
+je demande à un site extérieur
+
+```sh
+$ cat my-public-ip.py
+import requests
+
+response = requests.get("https://api64.ipify.org?format=json")
+public_ip = response.json()["ip"]
+
+print("Public IP:", public_ip)
+```
+]
+.fifty[
+je demande à mon OS (ou ipconfig sur Windows)
+
+```sh
+$ cat my-outgoing-ip.py
+import socket
+
+def get_outgoing_ip():
+    with socket.create_connection(("8.8.8.8", 53)) as s:
+        return s.getsockname()[0]
+
+print("Outgoing IP:", get_outgoing_ip())
+```
+]
+]
+
+.cols[
+  .fifty[
+  et j'obtiens (essayez !)
+```sh
+$ python my-public-ip.py
+*Public IP: 138.96.202.10
+```
+
+  ]
+  .fifty[
+  .. et ça peut être différent ! quel est ce mystère ?
+```sh
+$ python my-outgoing-ip.py
+*Outgoing IP: 10.1.1.15
+```
+  ]
+]
+
+---
+
+## le NAT (Network Address Translation)
+
+.cols[
+
+.sixty-five[
+et mon petit doigt me dit que:
+
+- vous allez tous avoir **la même adresse publique**
+- mais pour la deuxième vous avez chacun une **adresse locale différente**
+
+en fait il y a deux types d'adresses IP :
+
+- publiques: celles qui sont visibles sur le réseau, et qui sont uniques
+- privées: celles qui sont utilisées **uniquement** dans un réseau local
+
+<img src="static/media/nat-routing.svg" width="125%">
+]
+
+.thirty-five[
+<br><br>
+les adresses privées réservées:
+
+- `192.168.0.0/16` (65 536 adresses)
+
+- `172.16.0.0/16` (65 536 adresses)
+
+- `10.0.0.0/8` (16 777 216 adresses)
+]
+]
 
 ---
 
