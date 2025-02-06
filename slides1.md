@@ -293,7 +293,10 @@ C'est ce qu'on appelle l'adresse IP, pour _Internet Protocol_. L'adresse IP d'un
 <br><br>
 .center[<img src="static/media/ip-address.svg" style="width: 30%;">]
 
---
+il y a donc deux parties : l'adresse du réseau (souvent sur 24 bits) et l'adresse de l'hôte (souvent sur 8 bits)  
+lorsqu'on a besoin d'écrire l'adresse d'un réseau on écrit alors comme ceci le nombre de bits de l'adresse réseau
+.center[<img src="static/media/ip-address-subnet.svg" style="width: 30%;">]
+
 
 **Remarque :** en 2011 💣 **l'épuisement des adresses IP** disponibles...
 
