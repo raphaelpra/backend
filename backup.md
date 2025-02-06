@@ -23,7 +23,7 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>2025 - <i> Réseaux </i>  </span>
+        <span>2025 - <i> Réseaux & Backend</i>  </span>
     </div>
 </div>
 

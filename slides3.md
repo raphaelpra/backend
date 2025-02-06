@@ -24,7 +24,7 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>2025 - <i> Flask </i>  </span>
+        <span>2025 - <i> Réseaux & Backend</i> - 3/3: Flask </span>
     </div>
 </div>
 
