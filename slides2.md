@@ -355,10 +355,8 @@ Possible de voir les requêtes et réponses dans votre navigateur via
 
 ```sh
 # dans votre terminal:
-# on se procure les sources de ce cours
-# (si vous ne l'avez pas déjà fait)
-git clone https://github.com/ue22-p24/backend/
-cd backend
+# on va dans le repo du cours
+cd /bla-bla-bla/backend
 
 # pour lancer le serveur
 python -m http.server
@@ -366,7 +364,7 @@ python -m http.server
 # pour tuer le serveur tapez "Control-C"
 ```
 
-puis ouvrez dans votre navigateur `http://localhost:8000/index.html`
+puis ouvrez dans votre navigateur `http://localhost:8000/index.html` (*)
 
 --
 
@@ -398,6 +396,10 @@ httpd.serve_forever()
 ]
 
 ]
+
+.footnote.small[
+  (*) vous pouvez aussi le faire avec votre adresse IP - [on en a parlé ici](slides1.html#my-ip-address)
+ ]
 
 <!-- [http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
 
