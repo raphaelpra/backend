@@ -297,12 +297,24 @@ il y a donc deux parties : l'adresse du réseau (souvent sur 24 bits) et l'adres
 lorsqu'on a besoin d'écrire l'adresse d'un réseau on écrit alors comme ceci le nombre de bits de l'adresse réseau
 .center[<img src="static/media/ip-address-subnet.svg" style="width: 30%;">]
 
+---
 
-**Remarque :** en 2011 💣 **l'épuisement des adresses IP** disponibles...
+## Adresses IPv6
 
-.center[Il a donc été mis en place le protocol IP v6 (l'ancien protocole était le v4)]
+**en 2011** on prévoit **l'épuisement 💣 des adresses IP** disponibles !...
 
-.center[Le principe est simple passer d'une adresse définie sur 32 bits à une adresse sur 128 bits (écrites en hexadecimal) par exemple `2001:0db8:0000:85a3:0000:0000:ac1f:8001`]
+$2^{32} = 4294967296$ c'est-à-dire environ 1/2 adresse par personne sur terre  
+(bien sûr certaines personnes en ont plus que d'autres 😅)
+
+Il a donc été mis en place le protocol **IP v6** (l'ancien protocole était le **v4**)
+
+Le principe est simple: passer d'une adresse sur **32 bits** à une adresse sur **128 bits**  
+par exemple (en hexa) `2001:0db8:0000:85a3:0000:0000:ac1f:8001`  
+En fait on a tellement d'adresses que l'on peut donner une adresse IP à chaque grain de sable sur terre 🏖  ️
+
+Actuellement déployé en partie - principalement, mais pas que, dans le coeur du réseau chez les opérateurs  
+
+Notamment le besoin de IPv6 est moins important que prévu grâce notamment au NAT
 
 ---
 
@@ -352,7 +364,7 @@ gère trois éléments :
 Retenir les adresses IP c'est quand même pas super 🤯 !
 
 .center[
-Par exemple imaginez que vous deviez retenir `77.158.173.120` <br/>pour savoir les salles de cours .... <strike>on ne vous verrait pas souvent</strike>
+Par exemple imaginez que vous deviez retenir `109.69.190.66` <br/>pour savoir les salles de cours .... <strike>on ne vous verrait pas souvent !</strike>
 ]
 
 .footnote[`*` c'est l'adresse IP du serveur qui héberge OASIS]
@@ -361,29 +373,52 @@ Par exemple imaginez que vous deviez retenir `77.158.173.120` <br/>pour savoir l
 
 Un truc magique le :
 
-.center[ **D**omain **N**ame **S**ystem]
+.center[ **DNS** = **D**omain **N**ame **S**ystem]
 
 En gros c'est le service qui fait l'association entre un nom de domaine et un adresse IP.
 
 --
 
+.cols[
+
+.fifty[
 ```bash
-$ nslookup www.minesparis.psl.eu
+# plusieurs utilitaires pour faire des requêtes DNS
+
+$ nslookup  www.minesparis.psl.eu
+Server:		192.168.0.1
+Address:	192.168.0.1#53
 
 Non-authoritative answer:
-minesparis.psl.eu	dname = mines-paristech.fr.
-www.minesparis.psl.eu	canonical name = www.mines-paristech.fr.
-Name:	www.mines-paristech.fr
-*Address: 77.158.173.58
-Name:	www.mines-paristech.fr
-Address: 64:ff9b::4d9e:ad3a
+Name:	www.minesparis.psl.eu
+*Address: 109.69.190.66
 ```
+]
+
+.fifty[
+
+```bash
+$ host  www.minesparis.psl.eu
+*www.minesparis.psl.eu has address 109.69.190.66
+```
+
+```bash
+$ dig @8.8.8.8 www.minesparis.psl.eu A +noall +answer
+
+; <<>> DiG 9.10.6 <<>> @8.8.8.8 www.minesparis.psl.eu A +noall +answer
+; (1 server found)
+;; global options: +cmd
+*www.minesparis.psl.eu.	3600	IN	A	109.69.190.66
+```
+
+]
+]
 
 ---
 
 class: center, middle
 
-# On sait s'orienter comment on cause maintenant
+# On sait s'orienter, comment on cause maintenant
 
 ➡️ On a besoin de la 4ème couche du modèle OSI
 
@@ -424,21 +459,21 @@ Connaitre l'IP du serveur ne vous permet pas encore de communiquer avec l'applic
 
 <br><br>
 
-On peut avoir plusieurs applications sur un même serveur et heureusement 🥳
+On peut avoir plusieurs applications sur un même serveur, et heureusement 🥳
 
 Le choix de l'application avec laquelle on va discuter implique la notion de **_port_**
 
 .center[ port = porte d'entrée du service 🚪]
 
-Sur une machine on a $ 2^{16} = 65 536$
+Sur une machine on a $2^{16} = 65 536$
 
-.center[mais on ne fait pas tourner autant d'application]
+.center[(mais on ne fait pas tourner autant d'applications sur un serveur)]
 
 --
 
 Quelques port normalisés :
 
-.center[22 : SSH, 25 : SMTP, 80 : HTTP, 443 : HTTPS]
+.center[22 : SSH, 25 : SMTP, 53: DNS, 80 : HTTP, 443 : HTTPS]
 
 ---
 
