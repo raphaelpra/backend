@@ -50,6 +50,13 @@
         highlightLines: true,
         sourceUrl: "slides2.md",
       });
+      document.addEventListener("keydown", function (event) {
+        if (event.shiftKey && event.code === "Space") {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            slideshow.gotoPreviousSlide();
+        }
+      });
     </script>
   </body>
 </html>
