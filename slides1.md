@@ -262,7 +262,7 @@ class: middle, center
 .cols[
 .fifty[
 
-.center[<img src="static/media/osi-model.svg" style="width: 75%;">]
+.center[<img src="static/media/osi-model.svg" style="width: 72%;">]
 
 ]
 .fifty[
