@@ -126,7 +126,7 @@ On va regarder les plus classiques
 
 ## Architecture pair à pair
 
-.center[<img src="static/media/peer-to-peer.svg" style="width: 50%;">]
+.center[<img src="static/media/peer-to-peer.svg" style="width: 45%;">]
 
 Très à la mode à une époque où Netflix/Amazon Prime/... n'existaient pas (oui oui cette période est réelle 🤯)
 
