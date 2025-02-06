@@ -42,8 +42,13 @@ pre {
 
 .cols {
   display: flex;
+  flex-wrap: no-wrap;
   justify-content: space-between;
 }
+.bottom {
+  align-items: flex-end
+}
+
 
 .vertbar {
   flex: 0%;
@@ -54,12 +59,12 @@ pre {
 }
 
 .thirty {
-  flex: 30%;
+  width: 29%;
 }
 
 .fourty {
   /* flex: 40%; */
-  width: 40%;
+  width: 39%;
 }
 
 .fifty {
@@ -67,15 +72,15 @@ pre {
 }
 
 .sixty {
-  flex: 60%;
+  width: 59%;
 }
 
 .thirty_five {
-  flex: 35%;
+  width: 34%;
 }
 
 .sixty_five {
-  flex: 65%;
+  width: 64%;
 }
 
 .x-video.embed.with-container {
@@ -91,10 +96,4 @@ p.legend {
   font-size: small;
   text-align: center;
   margin: 0;
-}
-
-.rows {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
 }

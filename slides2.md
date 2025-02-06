@@ -368,16 +368,39 @@ python -m http.server
 
 puis ouvrez dans votre navigateur `http://localhost:8000/index.html`
 
+--
 
-.center[
-[http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
+.cols[
+
+.cols.center.fourty[
+  On peut aussi le faire "à la main" en Python 🐍
+
+  📢 ⚠️ On regarde le fichier `minimal_server.py`
+
+  ```bash
+  $ python minimal_server.py
+  ```
 ]
 
-.center[
-<img src="static/media/qrcode/http_server.png" width="20%">
+.sixty[
+
+```python
+from http.server import HTTPServer, SimpleHTTPRequestHandler
+
+handler = SimpleHTTPRequestHandler
+
+print("Open this in your browser:\nhttp://localhost:9000/index.html")
+
+httpd = HTTPServer(('', 9000),  handler)
+httpd.serve_forever()
+```
 ]
 
-📢 ⚠️ On regarde le fichier `minimal_server.py`
+]
+
+<!-- [http://bit.ly/3EeuLLo](http://bit.ly/3EeuLLo)
+
+<img src="static/media/qrcode/http_server.png" width="20%"> -->
 
 ---
 
@@ -439,11 +462,11 @@ car définit la manière dont le serveur va traiter la requête.
 
 ---
 
-# Évidemment il existe des framework pour ça !
+# of course il existe des frameworks pour ça&nbsp;!
 
 ---
 
-# Les framework
+# Les frameworks
 
 Réponse à un besoin mais lequel ?
 
