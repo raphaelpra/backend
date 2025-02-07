@@ -929,65 +929,40 @@ Et à chaque évènement on va venir associer une action
 
 # Par exemple&nbsp;:
 
+Voyez dans le dossier `python/`:
+
 .cols[
 .fifty[
 
-```javascript
-var socket = new WebSocket("ws://localhost:3060/ws");
+le protocole "ping-pong":
 
-socket.onopen = function (e) {
-  alert("[open] Connection established");
-  alert("Sending to server");
-  socket.send("My name is John");
-};
+- `ws-server.py` : un serveur WebSocket en Python
+- `ws-client.py` : un client WebSocket en Python
+- `ws-client.js` : un client WebSocket en JavaScript
 
-socket.onmessage = function (event) {
-  alert(`[message] Data received from server: ${event.data}`);
-};
-
-socket.onclose = function (event) {
-  if (event.wasClean) {
-    alert(
-      `[close] Connection closed cleanly,
-      code=${event.code} reason=${event.reason}`
-    );
-  } else {
-    // e.g. server process killed or network down
-    // event.code is usually 1006 in this case
-    alert("[close] Connection died");
-  }
-};
-
-socket.onerror = function (error) {
-  alert(`[error] ${error.message}`);
-};
-```
-
+ça marche mais ça n'a pas grand intérêt  
+disons que ça a le mérite de montrer comment ça fonctionne
 ]
+
 .fifty[
+le protocole "countdown", même logique:
 
-```python
-from tornado.websocket import websocket_connect
+- `python ws-server2.py` pour le serveur
+- `python ws-client2.py 3` va durer 3 secondes
+- `node ws-client2.js 3` pareil mais en JS
 
-def on_message( msg ):
-    print(f"[In on message] {msg}")
+cette fois c'est plus intéressant, le client au serveur envoie un nombre de secondes, le et serveur répond en décomptant jusqu'à 0
+]
+]
 
-ws = await websocket_connect("ws://localhost:3060/ws",
-  on_message_callback=on_message)
 
-await ws.write_message("coucou")
-await ws.write_message("byebye")
-await ws.write_message("vive la MMC")
 
-```
-
+.footnote.small[
 ⚠️ Vous voyez apparaître le mot clé `await` que vous ne connaissez pas en Python 🐍
 
 C'est lié à la programmation asynchrone. Pour plus de détails je vous encourage à faire un tour sur le Mooc
 
 .center[*Python : des fondamentaux aux concepts avancés du langage*]
-
-]
 ]
 
 ---

@@ -19,11 +19,6 @@ open http://localhost:nnnn/index.html
 
 ## warnings
 
-### slides2
-
-- slide 46: websockets example: not sure how to run that
-- slide 47: try out the messagerie instantanée (under git?)
-
 ### slides3
 
 WIP - not reviewed yet
