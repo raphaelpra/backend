@@ -83,6 +83,13 @@ pre {
   width: 64%;
 }
 
+.twenty {
+  width: 19%;
+}
+.eighty {
+  width: 79%;
+}
+
 .x-video.embed.with-container {
   border: none;
   box-shadow: none;

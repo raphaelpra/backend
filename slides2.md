@@ -532,7 +532,7 @@ Focalisé sur le développement côté serveur
 # frameworks backend: les grands principes
 
 .center[
-<img src="static/media/framework_routes.png" width=100%>
+<img src="static/media/framework-routes.svg" width=70%>
 ]
 
 A cela un framework complet ajoute des fonctionnalités de :
@@ -711,7 +711,7 @@ pour garantir la sécurité de l'utilisateur
 En pratique le chiffrement fonctionne avec un système clé publique/clé privée
 
 .center[
-<img src="static/media/tls.png" width="60%">
+<img src="static/media/timeline-tls.svg" height="500px">
 ]
 
 ---
@@ -859,50 +859,51 @@ Par exemple, allez sur <https://www.mat.minesparis.psl.eu> et trouvez le cookie 
 # Mais pourquoi ?
 
 .cols[
-.thirty[
-<img src="static/media/http.png" width="80%">
+
+.twenty[
+<img src="static/media/timeline-http.svg" width="100%">
 ]
-.sixty[
+
+.eighty[
 
     <br><br>
 
-Fonctionnement de HTTP très rigide
+Fonctionnement de HTTP très rigide: orienté **question/réponse**
+<br>
+**Impossible** pour le serveur d'être **à l'origine** de l'échange : assez limitant en fait 😮‍💨
 <br><br>
-.center[question/réponse]
-<br><br>
-Impossible pour le serveur d'être à l'origine de l'échange
-.center[Assez limitant en fait 😮‍💨]
+oblige Patrick à tout le temps demander s'il y a du nouveau pour lui...
 
 .cols[
 .fifty[
-<img src="static/media/limitation1.png" width="100%">
+<img src="static/media/limitation1.svg" width="100%">
 ]
 .fifty[
-<img src="static/media/limitation2.png" width="100%">
-
+<img src="static/media/limitation2.svg" width="100%">
+]
 ]
 
 ]
 
-]
 ]
 
 ---
 
 # Websocket
 
-.center[En 2011 révolution arrivée de Websocket 🤯]
+.center[En 2011: révolution arrivée de Websocket 🤯]
 
 .cols[
-.fifty[
+.sixty[
 <br><br>
 .center[connexion **bidirectionnelle** entre un client et le serveur
 <br><br>on parle de connexion *full-duplex*
-<br><br>Permet au serveur de ***pousser*** des informations vers le client sans que ce dernier n'est rien demandé 😲
+<br><br>permet au serveur de ***pousser*** des informations vers le client sans que ce dernier n'est rien demandé 😲
 ]
+son petit nom: `ws` (ou `wss` pour le sécurisé)
 ]
-.fifty[
-.center[<img src="static/media/ws.png" width="70%">]
+.fourty[
+.center[<img src="static/media/timeline-ws.svg" width="70%">]
 ]
 ]
 
@@ -916,7 +917,7 @@ Très simplement en fait !
 `ws://mon-super-server.com` ou `wss://mon-super-server.com`
 ]
 
-.center[Une fois la connexion établie <br><br>on doit simplement se mettre en état d'écoute à des évènements particuliers]
+.center[Une fois la connexion établie <br><br>On doit simplement se mettre en état d'écoute à des évènements particuliers]
 
 Quatre types d'évènements
 
@@ -926,7 +927,7 @@ Et à chaque évènement on va venir associer une action
 
 ---
 
-# Par exemple :
+# Par exemple&nbsp;:
 
 .cols[
 .fifty[

@@ -4,7 +4,7 @@ les slides du cours réseau / backend à l'École des Mines de Paris
 
 ## Slides
 
-elles sont faites avec `remark.js` qui part de sources en `markdown`  
+elles sont faites avec `remark.js` qui part de sources en `markdown`
 voir <https://github.com/gnab/remark/wiki> à propos de ce qu'on peut mettre dans le markdown
 
 ## Développement
@@ -19,20 +19,11 @@ open http://localhost:nnnn/index.html
 
 ## warnings
 
-### cours2
+### slides2
 
-- all the qr-code like pictures are missing
+- slide 46: websockets example: not sure how to run that
+- slide 47: try out the messagerie instantanée (under git?)
 
-- slide2: 2 missing pictures
-- slide3: recoverable missing - see in excalidraw
-- slide6: recoverable x 2
-- slide8:recoverable (1/3 missing)
-- slide 12: second picture missing
-- slide23: all logos missing
-- slide25 flask logo missing
-- slide30: http https missing
-- slide33: warmup https missing
-- 34 openssl letsencript missing
-- 37 recoverable x3
-- 43 1 missing 2 recoverable
-- 44 missing ws
+### slides3
+
+WIP - not reviewed yet
