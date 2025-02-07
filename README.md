@@ -1,6 +1,8 @@
 # slides réseau / backend
 
-## Présentation
+les slides du cours réseau / backend à l'École des Mines de Paris
+
+## Slides
 
 elles sont faites avec `remark.js` qui part de sources en `markdown`  
 voir <https://github.com/gnab/remark/wiki> à propos de ce qu'on peut mettre dans le markdown
