@@ -10,8 +10,11 @@ voir <https://github.com/gnab/remark/wiki> à propos de ce qu'on peut mettre dan
 ## Développement
 
 ```bash
-python -m http.server &
-open http://localhost:8000/index.html
+# start vite dev server
+npm run dev
+
+# then in another terminal
+open http://localhost:nnnn/index.html
 ```
 
 ## warnings
