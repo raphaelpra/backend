@@ -30,7 +30,7 @@ layout: true
 
 ---
 
-# Récap de la semaine dernière
+# Récap de la dernière fois
 
 .center[Architecture classique Client <-> Serveur avec des variations peer-to-peer, three-tier, ... ]
 
@@ -41,7 +41,7 @@ layout: true
 .fifty[
 Un modèle OSI en 7 couches
 
-.center[<img src="static/media/ip-address.svg" width="20%">]
+.center[<img src="static/media/ip-address.svg" width="40%">]
 
 Un protocole HTTP(S) pour le web
 
