@@ -402,7 +402,7 @@ print("Public IP:", public_ip)
 ```
 ]
 .fifty[
-je demande à mon OS (ou ipconfig sur Windows)
+je demande à mon OS (*)
 
 ```sh
 $ cat my-outgoing-ip.py
@@ -434,6 +434,8 @@ $ python my-outgoing-ip.py
 ```
   ]
 ]
+
+.footnote.small[(*): depuis le terminal, utiliser: `ipconfig` sur Windows, `ifconfig` sur MacOS, `ip address show` sur Linux]
 
 ---
 

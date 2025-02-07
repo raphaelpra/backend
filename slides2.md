@@ -433,7 +433,9 @@ car définit la manière dont le serveur va traiter la requête.
 <img src="static/media/qrcode/http_server.png" width="20%">
 ]
 
-📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`
+📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`  
+
+ou aussi dispo dans le dossier `python/`
 
 ---
 
@@ -469,12 +471,10 @@ En gros un guide <strike> spirituel </strike>, permettant de développer simplem
 
 Ensemble de programmes effectuant des opérations spécifiques, que vous allez utiliser de manière ponctuelle au sein de vos programmes en suivant votre propre logique.
 
-<br>
-
 Par exemple `NumPy` en Python 🐍 est une librairie
 
 .center[
-<img src="static/media/library.png" width="70%">
+<img src="static/media/code_with_library.svg" height="200px">
 ]
 
 ]
@@ -483,13 +483,11 @@ Par exemple `NumPy` en Python 🐍 est une librairie
 .center[<b> Framework </b>]
 
 Cadre de développement dans lequel le développeur vient s'inscrire, i.e. développer des fonctionnalités/comportements. Là ce n'est plus le développeur qui fixe sa logique mais le framework.
-
-<br>
-
+ 
 Un code à trou 🕳️ en quelque sorte
 
 .center[
-<img src="static/media/framework_concept.png" width="70%">
+<img src="static/media/code_with_framework.svg" height="200px">
 ]
 
 ]
@@ -511,7 +509,7 @@ Un code à trou 🕳️ en quelque sorte
   <img src="static/media/framework_frontend.png" width=50%>
 ]
 
-Focalisé sur le développement d'application côté client.
+Focalisé sur le développement d'application côté client
 
 ]
 .vertbar[]
@@ -531,7 +529,7 @@ Focalisé sur le développement côté serveur
 
 ---
 
-# Les grands principes des framework backend
+# frameworks backend: les grands principes
 
 .center[
 <img src="static/media/framework_routes.png" width=100%>
@@ -547,16 +545,16 @@ A cela un framework complet ajoute des fonctionnalités de :
 Micro-framework Python 🐍 développé depuis 2010.
 <br><br>
 .center[
-<img src="static/media/logos/logo_flask.png" width=40% />
+<img src="static/media/logos/logo_flask.svg" width=30% />
 ]
 <br><br>
-🚧 Micro-framework ne veut pas dire pas utilisable sur des gros projets ⚠️
+🚧 Micro-framework ne veut pas dire "pas utilisable sur des gros projets"  ⚠️
 <br><br>
 .center[
 Pinterest, Airbnb, Trivago, ...
 ]
 <br><br>
-Micro-framework car noyau très léger et minimaliste mais pouvant être enrichi avec des extensions.
+Micro-framework car noyau très léger et minimaliste, mais pouvant être enrichi avec des extensions.
 
 ---
 
@@ -629,9 +627,9 @@ class: center, middle
 
 **Objectif** : Mettre en place une API permettant d'accéder au contenu de fichier CSV
 
-Vous avez [https://github.com/ue22-p24/network-frontend-apitester](https://github.com/ue22-p24/network-frontend-apitester) un frontend tout fait !
+Vous avez <https://github.com/ue22-p24/backend-apitester-frontend> un frontend tout fait !
 
-Et vous avez [https://github.com/ue22-p24/network-backend-api-skeleton](https://github.com/ue22-p24/network-backend-api-skeleton) un backend à compléter
+Et vous avez <https://github.com/ue22-p24/backend-api-skeleton> un backend à compléter
 
 L'api du backend doit **impérativement** respecter les routes documentées dans le README.
 
@@ -641,9 +639,8 @@ L'api du backend doit **impérativement** respecter les routes documentées dans
 
 Quelle différence entre
 
-.center[HTTP et HTTP**S**]
-
-.center[❓]
+.center[HTTP et HTTP**S**  
+❓]
 
 --
 
@@ -652,11 +649,11 @@ Quelle différence entre
 Grosso modo :
 
 .center[
-Enrobage du protocôle HTTP dans une couche de chiffrement <br><br><br>
+Enrobage du protocôle HTTP dans une couche de chiffrement <br><br>
 pour garantir la sécurité de l'utilisateur
 ]
 
-.center[<img src="static/media/https.jpg" width="40%">]
+.center[<img src="static/media/https.jpg" width="35%">]
 
 ---
 
@@ -696,11 +693,11 @@ pour garantir la sécurité de l'utilisateur
 
 .cols[
 .fifty[
-<img src="static/media/http_not_safe.png" width="100%">
+<img src="static/media/http-not-safe.svg" width="100%">
 ]
 .fifty[
 
-<img src="static/media/https_safe.png" width="100%">
+<img src="static/media/https-safe.svg" width="100%">
 
 ]
 ]
@@ -719,17 +716,18 @@ En pratique le chiffrement fonctionne avec un système clé publique/clé privé
 
 ---
 
-# Autorité de certification
+# Autorité de certification (CA)
 
-.center[Tiers de confiance <br><br> qui va générer les certificats permettant le chiffrement et l'authentification de l'identité des correspondants]
+.center[**Tiers de confiance** <br>qui va générer les certificats permettant le chiffrement et l'authentification de l'identité des correspondants]
 
-Possible de générer ses propres certificat soi-même mais ils ne sont pas considérés comme valide par les clients standards.
+<br>
+Possible de générer ses propres certificat soi-même mais ils ne sont pas considérés comme valides par les clients standard (sachant que les navigateurs web ont une liste de CA de confiance)
 
-.center[<img src="static/media/logos/openssl.png" width="20%">]
+<br>
+Les logiciels open-source utilisent majoritairement la librairie ***OpenSSL*** <img src="static/media/logos/openssl.svg" width="20%">
 
-Pour générer des certificats gratuitement il existe l'initiative **Let's Encrypt**
-
-.center[<img src="static/media/logos/letsencrypt.png" width="30%">]
+<br>
+Pour générer des certificats gratuitement il existe l'initiative **Let's Encrypt** <img src="static/media/logos/lets-encrypt.svg" width="30%">
 
 ---
 
@@ -751,28 +749,27 @@ Faisons une pause goûter 🤤
 ]
 
 .center[
-Ca fait parti de ces petites choses ***cachées*** dans le header des réponses http.
+Ça fait partie de ces petites choses ***cachées*** dans le header des réponses HTTP
 ]
 
 ---
 
 # Concrètement c'est quoi ?
 
-Un 🍪 HTTP c'est
-.center[données qu’un serveur envoie à un client]
+ .center[Un 🍪 HTTP c'est une donnée qu’un serveur envoie à un client]
 
 .cols[
 .fifty[
-<img src="static/media/cookie1.png" width="100%">
+<img src="static/media/cookie1.svg" width="100%">
 ]
 .fifty[
-<img src="static/media/cookie2.png" width="100%">
+<img src="static/media/cookie2.svg" width="100%">
 ]
 ]
 
-.center[stockée sur le client (dans le navigateur) <br> **renvoyée** au serveur à chaque nouvelle requête]
+.center[stockée sur le client (dans le navigateur) <br> et **renvoyée** au serveur à chaque nouvelle requête]
 
-.center[ <img src="static/media/cookie3.png" width="40%">]
+.center[ <img src="static/media/cookie3.svg" width="40%">]
 
 ---
 
@@ -780,11 +777,13 @@ Un 🍪 HTTP c'est
 
 Les cookies sont là pour enrichir le HTTP.
 
+***Le problème***
+
 .center[HTTP = protocole sans état]
 
-En gros impossible pour un serveur HTTP de savoir si deux requètes viennent d'une même client ou pas 😵‍💫
+En gros impossible pour un serveur HTTP de savoir si deux requêtes viennent d'un même client ou pas 😵‍💫
 
-.center[comment rester authentifier alors ?]
+.center[Comment rester authentifié alors ?]
 
 **_La solution_**
 
@@ -798,7 +797,7 @@ Concrètement on va pouvoir stocker :
 
 # Mettre des cookies
 
-Rien de plus simple, dans l'en-tête de la réponse serveur à une requête client il suffit d'ajouter
+Rien de plus simple, dans l'en-tête de la réponse serveur il suffit d'ajouter
 <br><br>
 .center[
 `Set-Cookie: <name>=<value>; <attributs...>`
@@ -808,25 +807,32 @@ Attributs de Cookie
 
 - `Expires` : durée de vie (date/heure)
 - `Max-Age` : durée de vie (seconde)
-- `Domain` : noms de domaine pour lesquels le cookie est renvoyé [par exemple](https://www.mat.minesparis.psl.eu)
+- `Domain` : noms de domaine pour lesquels le cookie est renvoyé
 - `Path` : chemin particulier pour lesquels le cookie est renvoyé
-- `Secure` : si autorise ou pas l'envoie via HTTP et non HTTPS
-- `HttpOnly` : si autorise ou pas l'accès via autre chose de du http(s)
+- `Secure` : si on autorise ou pas l'envoi via HTTP et non HTTPS
+- `HttpOnly` : si on autorise ou pas l'accès via autre chose de du http(s)
+
+Par exemple, allez sur <https://www.mat.minesparis.psl.eu> et trouvez le cookie `PHPSESSID`
 
 ---
 
-# Quelques rêgles à suivre
+# Quelques règles à suivre
 
-.center[<img src="static/media/logos/cnil.jpg" width="30%">]
-.center[https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies](https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies)
+.center[<img src="static/media/logos/cnil.svg" width="30%">]
 
-- Internautes doivent être informé et donner leur consentement avant le dépôt de certains cookies
+.center[<https://www.cnil.fr/fr/cookies-et-autres-traceurs/regles/cookies>]
+
+- Internautes doivent être informés et donner leur consentement avant le dépôt de certains cookies
   - ❌ Traçage publicitaire / réseaux sociaux
   - ✔️ Cookie pour dire qu'on refuse les cookies [exemple](https://cpp.bmarchand.fr), panier d'achat, authentification, ...
 - Recueillir le consentement
   - Bouton refusé aussi visible que celui accepté
   - Possibilité de choisir les cookies
   - Facilité de retrait du consentement
+
+.footnote.small[voir aussi les RGPD:
+<https://www.economie.gouv.fr/entreprises/reglement-general-protection-donnees-rgpd>
+]
 
 ---
 
