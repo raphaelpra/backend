@@ -1089,10 +1089,12 @@ L'idée est que vous réalisiez les actions suivantes :
 
 # Application 2 : utilisation de l'API Notion
 
-L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de données Notion. **Une squelette est disponible [ici](https://github.com/ue22-p24/notion-api-demo-skeleton)**. L'application à terme doit pouvoir :
+L'objectif ici est de mettre en place un programme Python permettant de modifier le contenu d'une base de données Notion. **[Un squelette est disponible ici](https://github.com/ue22-p24/backend-notion-api-skeleton)**. L'application à terme doit pouvoir :
+
+.small[
 
 .cols[
-.fifty[
+.sixty[
 
 - Lister l'ensemble des tâches d'une base de données
 - Afficher le détail d'une tâche défini par son ID
@@ -1106,12 +1108,12 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 .cols[
 .fifty[
 **Step 1️⃣** : créer une base de données dans Notion
-.center[Vous pouvez dupliquer [celle-ci](https://bmarchand.notion.site/04620d6c67274d8e96211ddc738acf76?v=31bcb2e38fa242cfbc8eb9c51eca6108)]
+.center[vous pouvez dupliquer [celle-ci](https://bmarchand.notion.site/04620d6c67274d8e96211ddc738acf76?v=31bcb2e38fa242cfbc8eb9c51eca6108)]
 
 **Step 2️⃣** : créer une intégration Notion
 .center[Se rendre sur le site [https://www.notion.so/my-integrations](https://www.notion.so/my-integrations) et créer une intégration]
 
-<img src="static/media/notion-token.png" width="60%">
+<img src="static/media/notion-token.png" width="80%">
 
 ]
 
@@ -1119,7 +1121,7 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 **Step 3️⃣** : ajouter la base de données à l'intégration créée précédemment
 .center[depuis la page de la base de données]
 
-<img src="static/media/notion-db-to-integ.png" width="20%">
+<img src="static/media/notion-db-to-integ.png" width="37%">
 
 **Step 4️⃣** : récuper l'ID de la base de données
 
@@ -1128,6 +1130,7 @@ L'objectif ici est de mettre en place un programme Python permettant de modifier
 ]
 ]
 
+]
 ---
 
 class: middle, center
