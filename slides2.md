@@ -24,7 +24,10 @@ layout: true
 
 <div class="slide_footer">
     <div class="wrap">
-        <span>2025 - <i> Réseaux & Backend</i> - 2/3: Coté Serveur! </span>
+        <span>2025 - <i> Réseaux & Backend</i>
+        - <a href="slides1.html">1/3: Réseaux</a>
+        - <a class="current-slides" href="slides2.html">2/3: Coté Serveur!</a>
+        - <a href="slides3.html">3/3: Flask</a>
     </div>
 </div>
 

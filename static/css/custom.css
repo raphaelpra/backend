@@ -108,3 +108,19 @@ p.legend {
 .small {
   font-size: small;
 }
+
+.slide_footer {
+  & a {
+    text-decoration: none;
+  }
+  & .current-slides {
+    pointer-events: none;
+    cursor: default;
+    color: green;
+  }
+}
+
+/* override minesparis.css by being more specific */
+body div.slide_footer {
+  left: 80%
+}
