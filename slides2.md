@@ -972,7 +972,7 @@ C'est lié à la programmation asynchrone. Pour plus de détails je vous encoura
 
 # En pratique
 
-## Une messagerie instantannée !
+## Une messagerie instantanée !
 
 .center[[http://bit.ly/3xu599H](http://bit.ly/3xu599H)]
 
