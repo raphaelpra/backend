@@ -242,7 +242,7 @@ Par exemple votre ordinateur portable possède deux interfaces réseau : la pris
 
 ## Différentes qualités
 
-La qualité du réseau, un petit truc qui a son importance suivant l'application 🚀 <buton onclick="plot_network()"> 📈 </button>
+La qualité du réseau, un petit truc qui a son importance suivant l'application 🚀 <button onclick="plot_network()"> click me 📈 </button>
 
 .center[
 
