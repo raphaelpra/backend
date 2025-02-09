@@ -19,6 +19,12 @@ du coup tous les html sont semblables, on les a factorisés dans `template.html`
 python template_run.py
 ```
 
+si sur macos, on peut obtenir une sorte de mode *watch* en faisant
+
+```bash
+echo template.html | entr -rp python template_run.py
+```
+
 ## Développement
 
 ```bash
