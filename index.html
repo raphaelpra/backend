@@ -1,3 +1,5 @@
+<!-- DO NOT MODIFY THIS FILE - the source is in template.html -->
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -18,33 +20,44 @@
       referrerpolicy="no-referrer"
     />
 
+    <script src="https://cdn.plot.ly/plotly-2.11.1.min.js"></script>
+    <script src="static/js/plot_network.js" defer></script>
   </head>
   <body>
-    <textarea id="source">
-
-      # Programmation Fiable et Coopérante
-
-      ## Introduction Réseaux & Backend
-
-      - [cours 1 - Introduction réseaux](slides1.html)
-
-      - [cours 2 - Côté Serveur !](slides2.html)
-
-      - [cours 3 - Framework web --- Flask !](slides3.html)
-
-      <div class="slide_footer">
-        <div class="wrap">
-            <span>2025 - <i> Réseaux & Backend</i> - Index </span>
-        </div>
-      </div>
-
-    </textarea>
     <script src="https://remarkjs.com/downloads/remark-latest.min.js"></script>
+    <script>
+      MathJax = {
+        tex: {
+          inlineMath: [
+            ["$", "$"],
+            ["\\(", "\\)"],
+          ],
+        },
+        svg: {
+          fontCache: "global",
+        },
+      };
+    </script>
+    <script
+      type="text/javascript"
+      id="MathJax-script"
+      async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    ></script>
+
     <script>
       var slideshow = remark.create({
         ratio: "16:9",
         countIncrementalSlides: false,
         highlightLines: true,
+        sourceUrl: "index.md",
+      });
+      document.addEventListener("keydown", function (event) {
+        if (event.shiftKey && event.code === "Space") {
+            event.preventDefault();
+            event.stopImmediatePropagation();
+            slideshow.gotoPreviousSlide();
+        }
       });
     </script>
   </body>
