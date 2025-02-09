@@ -15,3 +15,4 @@ for slide, title in slides_and_titles:
     output_file = Path(slide).with_suffix(".html")
     with output_file.open("w") as f:
         f.write(Template(html_template).render(title=title, md_file=slide))
+        print(f"Generated {output_file}")
