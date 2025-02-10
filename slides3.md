@@ -45,7 +45,7 @@ layout: true
 .fifty[
 <img src="static/media/ip-address.svg" width="30%"> <img src="static/media/http-request.svg" width="40%">
 
-<img src="static/media/serveur_recap.png" width="400px">
+<img src="static/media/server-app.svg" width="400px">
 ]
 
 .twenty[
