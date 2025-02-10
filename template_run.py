@@ -9,6 +9,7 @@ slides_and_titles = [
     ("slides1.md", "UE22 - backend 1/3"),
     ("slides2.md", "UE22 - backend 2/3"),
     ("slides3.md", "UE22 - backend 3/3"),
+    ("backup.md", "UE22 - backend - backup"),
 ]
 
 for slide, title in slides_and_titles:

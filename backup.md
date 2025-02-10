@@ -32,7 +32,7 @@ layout: true
 # La coopération - mythe ou réalité
 
 .center[
-<img src="static/media/architecture.png" style="width: 80%;">
+<img src="static/media/architecture.svg " style="width: 80%;">
 ]
 
 La plupart des systèmes informatiques/services web que vous pouvez utiliser quotidiennement ne sont pas **une** application mais un **ensemble** d'application qui intéragissent entre elles.
@@ -58,19 +58,19 @@ Cela introduit alors tout un tas de questions :
 
 ## Client-serveur
 
-.center[<img src="static/media/ClientServer.png" style="width: 50%;">]
+.center[<img src="static/media/client-server.svg" style="width: 50%;">]
 
 ---
 
 ## Architecture trois-tiers
 
-.center[<img src="static/media/ThreeTiers.png" style="width: 50%;">]
+.center[<img src="static/media/architecture-three-tiers.svg" style="width: 50%;">]
 
 ---
 
 ## Architecture pair à pair
 
-.center[<img src="static/media/PeerToPeer.png" style="width: 50%;">]
+.center[<img src="static/media/peer-to-peer.svg" style="width: 50%;">]
 
 ---
 
@@ -82,7 +82,8 @@ Cela introduit alors tout un tas de questions :
 
 # Le cloud
 
-.center[<img src="static/media/nocloud.png" style="width: 60%">
+.center[
+  <img src="static/media/nocloud.png" style="width: 40%">
 ]
 
 <!--
@@ -111,6 +112,8 @@ Quelques chiffres:
 <div style="position: absolute; bottom: 20%; left: 50%;">
   <i class="fa-solid fa-location-dot"></i> Actuellement à Evry mais déménagement sur le campus<br>de Versaille Satory prévu pour été 2024.
 </div>
+
+-->
 
 ---
 
@@ -402,4 +405,5 @@ Homonégénisation et relocalisation des champs jusq'au 3ème ordre
 
 class: middle, center
 
-## Merci pour votre attention -->
+## Merci pour votre attention 
+
