@@ -45,6 +45,7 @@ pre {
   flex-wrap: no-wrap;
   justify-content: space-between;
 }
+
 .bottom {
   align-items: flex-end
 }
@@ -86,6 +87,7 @@ pre {
 .twenty {
   width: 19%;
 }
+
 .eighty {
   width: 79%;
 }
@@ -113,6 +115,7 @@ p.legend {
   & a {
     text-decoration: none;
   }
+
   & .current-slides {
     pointer-events: none;
     cursor: default;

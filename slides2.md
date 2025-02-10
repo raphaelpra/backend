@@ -477,7 +477,7 @@ Ensemble de programmes effectuant des opérations spécifiques, que vous allez u
 Par exemple `NumPy` en Python 🐍 est une librairie
 
 .center[
-<img src="static/media/code_with_library.svg" height="200px">
+<img src="static/media/code-with-library.svg" height="200px">
 ]
 
 ]
@@ -490,7 +490,7 @@ Cadre de développement dans lequel le développeur vient s'inscrire, i.e. déve
 Un code à trou 🕳️ en quelque sorte
 
 .center[
-<img src="static/media/code_with_framework.svg" height="200px">
+<img src="static/media/code-with-framework.svg" height="200px">
 ]
 
 ]
@@ -548,7 +548,7 @@ A cela un framework complet ajoute des fonctionnalités de :
 Micro-framework Python 🐍 développé depuis 2010.
 <br><br>
 .center[
-<img src="static/media/logos/logo_flask.svg" width=30% />
+<img src="static/media/logos/logo-flask.svg" width=30% />
 ]
 <br><br>
 🚧 Micro-framework ne veut pas dire "pas utilisable sur des gros projets"  ⚠️
