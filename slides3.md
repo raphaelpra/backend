@@ -39,7 +39,7 @@ layout: true
 
 .cols[
 .fourty[
-.center[<img src="static/media/osi-model.svg" width="60%">]
+.center[<img src="static/media/osi-model.svg" width="70%">]
 ]
 
 .fifty[
@@ -50,14 +50,14 @@ layout: true
 
 .twenty[
   <br><br>
-<img src="static/media/logos/lets-encrypt.svg" width="200px">
+<img src="static/media/logos/lets-encrypt.svg" width="150px">
 <p style="font-size: 4rem"> 🍪 </p>
 ]
 ]
 
 ---
 
-# Les framework
+# Les frameworks
 
 Réponse à un besoin mais lequel ?
 
@@ -102,7 +102,7 @@ Cadre de développement dans lequel le développeur vient s'inscrire, i.e. déve
 
 <br>
 
-Un code à trou 🕳️ en quelque sorte
+Un code à trou 🕳️ en quelque sorte - comme `arcade`
 
 .center[
 <img src="static/media/code-with-framework.svg" height="180px" >
@@ -156,6 +156,7 @@ Dans le cadre de ce cours on ne se focalisera que sur le côté `backend`
 ]
 
 À cela un framework complet ajoute des fonctionnalités de :
+
 .center[`Web Template`, `Sécurité`, `Accès à des bases de données`]
 
 ---
@@ -200,7 +201,7 @@ Micro-framework car noyau très léger et minimaliste mais pouvant être enrichi
 
 3️⃣ Pourquoi Flask et pas Django
 
-.center[J'ai une séance de 3 heures pas un semestre ... <span style="font-size: xx-small">et puis j'aime pas Django</span> 😒]
+.center[J'ai une séance de 3 heures pas un semestre ... <span style="font-size: small">et puis j'aime pas Django</span> 😒]
 
 ---
 
@@ -277,17 +278,23 @@ c'est l'avantage de Flask par rapport à Django <br> qui nécessite un setup plu
 
 # Minimal Working Example
 
-- Step 1️⃣ :
+.cols[
+.fifty[
+  - Step 1️⃣ :
 
 ```python
 from flask import Flask
 ```
+]
 
+.fifty[
 - Step 2️⃣
 
 ```python
 app = Flask("Appli de ouf")
 ```
+]
+]
 
 Ensuite tout repose sur une syntaxe un peu particulière :
 
@@ -301,7 +308,6 @@ def la_fonction_correspondante():
 ```
 
 Pour finir :
-
 .cols[
 .fifty[
 
@@ -1063,7 +1069,7 @@ def handle_my_custom_event(json):
 .left[
 Possibilité d'ajouter par dessus la notion de `room` <br>
 pour une gestion plus fine des destinataires
-<br><br>
+<br>
 .center[
 📥️ 📤️
 <http://bit.ly/3yVAEdt> 
@@ -1076,13 +1082,14 @@ pour une gestion plus fine des destinataires
 .fifty[
 
 ```js
-let socket = io.connect("http://" + document.domain + ":" + location.port);
+let socket = io.connect(
+    "http://" + document.domain + ":" + location.port);
 $("form").on("submit", (e) => {
   e.preventDefault();
   let user_name = $("input.username").val();
   let user_input = $("input.message").val();
   socket.emit("receive_msg", {
-    user_name: user_name,  
+    user_name: user_name,
     message: user_input,
   });
   $("input.message").val("").focus();
@@ -1091,7 +1098,7 @@ socket.on("the_response", (msg) => {
   if (typeof msg.user_name !== "undefined") {
     $("h3").remove();
     $("div.message_holder").append(
-      '<div><b style="color: #000">' +      
+      '<div><b style="color: #000">' +
         msg.user_name +
         "</b> " +
         msg.message +

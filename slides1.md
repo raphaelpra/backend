@@ -375,19 +375,11 @@ name: my-ip-address
 
 .fifty[
 Comment je fais pour connaitre mon IP ?
-
-pour commencer je clone le cours (si ce n'est déjà fait)  
-et je me rends dans le dossier `python`
 ]
-
 .fifty[
-```sh
-# dans votre terminal:
-git clone https://github.com/ue22-p24/backend/
-cd backend
-
-cd python
-```
+pour commencer je clone le cours (si ce n'est déjà fait)  
+sur github: `ue22-p24/web`  
+et je me rends dans le dossier `python`
 ]
 ]
 
@@ -405,7 +397,7 @@ public_ip = response.json()["ip"]
 print("Public IP:", public_ip)
 ```
 ]
-.fifty[
+.sixty[
 je demande à mon OS (*)
 
 ```sh

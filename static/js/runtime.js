@@ -7,17 +7,8 @@ function add_copy_buttons(_slideshow) {
       // Create the button
       let button = document.createElement("button");
       button.innerHTML = BUTTON;
-      button.style.position = "absolute";
-      button.style.top = "4px";
-      button.style.right = "4px";
-      button.style.padding = "2px 4px";
-      button.style.fontSize = "18px";
-      button.style.cursor = "pointer";
-      button.style.border = "none";
-      button.style.background = "#cccc";
-      button.style.color = "#2b2ee3aa";
-      button.style.borderRadius = "4px";
-      button.title = "copy to clipboard"
+      button.classList.add("copy-button");
+      button.title = "copy to clipboard";
 
       // Wrap pre in a relative div for positioning
       let wrapper = document.createElement("div");

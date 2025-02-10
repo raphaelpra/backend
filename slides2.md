@@ -373,7 +373,7 @@ puis ouvrez dans votre navigateur `http://localhost:8000/index.html` (*)
 
 .cols[
 
-.cols.center.fourty[
+.fourty[
   On peut aussi le faire "à la main" en Python 🐍
 
   📢 ⚠️ On regarde le fichier `minimal_server.py`
@@ -714,7 +714,7 @@ pour garantir la sécurité de l'utilisateur
 En pratique le chiffrement fonctionne avec un système clé publique/clé privée
 
 .center[
-<img src="static/media/timeline-tls.svg" height="500px">
+<img src="static/media/timeline-tls.svg" height="480px">
 ]
 
 ---
@@ -960,7 +960,7 @@ cette fois c'est plus intéressant, le client au serveur envoie un nombre de sec
 
 
 
-.footnote.small[
+.footnote[
 ⚠️ Vous voyez apparaître le mot clé `await` que vous ne connaissez pas en Python 🐍
 
 C'est lié à la programmation asynchrone. Pour plus de détails je vous encourage à faire un tour sur le Mooc
