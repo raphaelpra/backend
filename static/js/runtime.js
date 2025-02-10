@@ -1,21 +1,23 @@
 // the remarkjs callback is called with the slideshow as parameter
 function add_copy_buttons(_slideshow) {
-  console.log("adding copy buttons");
+  const BUTTON = '<i class="fa-regular fa-clipboard"></i>';
+  // console.log("adding copy buttons");
   document.querySelectorAll("code.remark-code").forEach((code) => {
-      console.log("adding copy button for code block");
+      // console.log("adding copy button for code block");
       // Create the button
       let button = document.createElement("button");
-      button.innerHTML = '<i class="fa-regular fa-clipboard"></i>';
+      button.innerHTML = BUTTON;
       button.style.position = "absolute";
-      button.style.top = "5px";
-      button.style.right = "5px";
-      button.style.padding = "5px";
-      button.style.fontSize = "14px";
+      button.style.top = "4px";
+      button.style.right = "4px";
+      button.style.padding = "2px 4px";
+      button.style.fontSize = "18px";
       button.style.cursor = "pointer";
       button.style.border = "none";
-      button.style.background = "rgba(0, 0, 0, 0.7)";
-      button.style.color = "white";
+      button.style.background = "#cccc";
+      button.style.color = "#2b2ee3aa";
       button.style.borderRadius = "4px";
+      button.title = "copy to clipboard"
 
       // Wrap pre in a relative div for positioning
       let wrapper = document.createElement("div");
@@ -28,8 +30,8 @@ function add_copy_buttons(_slideshow) {
       button.addEventListener("click", () => {
           let contents = code.innerText;
           navigator.clipboard.writeText(contents).then(() => {
-              button.innerText = "✔️ Copied!";
-              setTimeout(() => button.innerText = "📋", 2000);
+              button.innerHTML = "✔️ Copied!";
+              setTimeout(() => button.innerHTML = BUTTON, 2000);
           });
       });
   });
