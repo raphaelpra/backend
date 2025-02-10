@@ -232,7 +232,7 @@ Deux approches :
 Utilisation de librairies graphiques et développement d'un client lourd
 
 .center[
-<img src="static/media/qt_fltk.png" width=50%>
+<img src="static/media/old-school.svg" width=50%>
 ]
 
 ]
@@ -243,7 +243,7 @@ Utilisation de librairies graphiques et développement d'un client lourd
 Utilisation du navigateur
 
 .center[
-<img src="static/media/html_css_js.png" width=80%>
+<img src="static/media/new-age.svg" width=80%>
 ]
 
 ]
@@ -412,7 +412,7 @@ def handler():
 Possibilité offerte par Flask de définir des paramètres au sein même d'une URL
 
 .center[
-<img src="static/media/route_param.png" width=70%>
+<img src="static/media/flask-route-param.svg" width=70%>
 ]
 
 .cols[
