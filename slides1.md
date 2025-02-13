@@ -457,11 +457,11 @@ en fait il y a deux types d'adresses IP :
 <br><br>
 les adresses privées réservées:
 
-- `192.168.0.0/16` (65 536 adresses)
+- `192.168.0.0/16` <br> $2^{16} = 65,536$ adresses
 
-- `172.16.0.0/16` (65 536 adresses)
+- `172.16.0.0/12` <br> $2^{20} = 1,048,576$ adresses
 
-- `10.0.0.0/8` (16 777 216 adresses)
+- `10.0.0.0/8` <br> $2^{24} = 16,777,216$ adresses
 ]
 ]
 
