@@ -65,6 +65,9 @@ function run_slideshow(md_file) {
       ratio: "16:9",
       countIncrementalSlides: false,
       highlightLines: true,
+      navigation: {
+        scroll: false,
+      },
       sourceUrl: md_file,
     },
     // this callback is called with slideshow as a parameter
