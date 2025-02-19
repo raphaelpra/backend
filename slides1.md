@@ -250,7 +250,7 @@ La qualité du réseau, un petit truc qui a son importance suivant l'application
 ]
 
 .center[
-⏳️ Sur des grosses simulation le temps des échanges peut représenter 20% du temps de calcul 💣
+⏳️ Sur des grosses simulations le temps des échanges peut représenter 20% du temps de calcul 💣
 ]
 
 ---
@@ -309,7 +309,7 @@ lorsqu'on a besoin d'écrire l'adresse d'un réseau on écrit alors comme ceci l
 
 **en 2011** on prévoit **l'épuisement 💣 des adresses IP** disponibles !...
 
-$2^{32} = 4294967296$ c'est-à-dire environ 1/2 adresse par personne sur terre  
+2<sup>32</sup> = 4,294,967,296 c'est-à-dire environ 1/2 adresse par personne sur terre  
 (bien sûr certaines personnes en ont plus que d'autres 😅)
 
 Il a donc été mis en place le protocol **IP v6** (l'ancien protocole était le **v4**)
@@ -457,11 +457,11 @@ en fait il y a deux types d'adresses IP :
 <br><br>
 les adresses privées réservées:
 
-- `192.168.0.0/16` <br> $2^{16} = 65,536$ adresses
+- `192.168.0.0/16` <br> 2<sup>16</sup> = 65,536 adresses
 
-- `172.16.0.0/12` <br> $2^{20} = 1,048,576$ adresses
+- `172.16.0.0/12` <br> 2<sup>20</sup> = 1,048,576 adresses
 
-- `10.0.0.0/8` <br> $2^{24} = 16,777,216$ adresses
+- `10.0.0.0/8` <br> 2<sup>24</sup> = 16,777,216 adresses
 ]
 ]
 
@@ -573,7 +573,7 @@ Le choix de l'application avec laquelle on va discuter implique la notion de **_
 
 .center[ port = porte d'entrée du service 🚪]
 
-Sur une machine on a $2^{16} = 65 536$
+Sur une machine on a 2<sup>16</sup> = 65,536
 
 .center[(mais on ne fait pas tourner autant d'applications sur un serveur)]
 
