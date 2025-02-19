@@ -76,25 +76,20 @@ button.copy-button {
   max-width: 0px;
 }
 
-.thirty {
-  width: 29%;
+.fifty {
+  width: 47%;
 }
 
 .fourty {
-  /* flex: 40%; */
   width: 39%;
-}
-
-.fifty {
-  width: 47%;
 }
 
 .sixty {
   width: 59%;
 }
 
-.thirty-five {
-  width: 34%;
+.thirty {
+  width: 29%;
 }
 
 .sixty-five {
@@ -103,6 +98,21 @@ button.copy-button {
 
 .twenty {
   width: 19%;
+}
+
+.seventy {
+  width: 69%;
+}
+
+.thirty-five {
+  width: 34%;
+}
+
+.seventy-five {
+  width: 74%;
+}
+.twenty-five {
+  width: 24%;
 }
 
 .eighty {

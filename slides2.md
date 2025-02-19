@@ -379,7 +379,7 @@ puis ouvrez dans votre navigateur `http://localhost:8000/index.html` (*)
   📢 ⚠️ On regarde le fichier `minimal_server.py`
 
   ```bash
-  $ cd python/
+  $ cd python/http
   $ python minimal_server.py
   ```
 ]
@@ -438,7 +438,7 @@ car définit la manière dont le serveur va traiter la requête.
 
 📢 ⚠️ On regarde les fichiers `more_advance_server.py` et `more_more_advance_server.py`  
 
-ou aussi dispo dans le dossier `python/`
+ou aussi dispo dans le dossier `python/http`
 
 ---
 
@@ -932,7 +932,7 @@ Et à chaque évènement on va venir associer une action
 
 # Par exemple&nbsp;:
 
-Voyez dans le dossier `python/`:
+Voyez dans le dossier `python/sebsockets`:
 
 .cols[
 .fifty[

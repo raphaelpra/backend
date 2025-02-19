@@ -379,7 +379,7 @@ Comment je fais pour connaitre mon IP ?
 .fifty[
 pour commencer je clone le cours (si ce n'est déjà fait)  
 sur github: `ue22-p24/web`  
-et je me rends dans le dossier `python`
+et je me rends dans le dossier `python/ip-address`
 ]
 ]
 
@@ -559,14 +559,15 @@ mais ne spécifie en rien le ***contenu*** de ces communications
 # Un serveur == une application ?
 
 Connaitre l'IP du serveur ne vous permet pas encore de communiquer avec l'application qui se trouve sur ce serveur
-<br><br>
+<br>
 
 .center[❓ D'ailleurs sur un serveur il ne peut y avoir qu'une application réseau ou peut-on en mettre plusieurs ❓]
 
 --
 
-<br><br>
+.cols[
 
+.seventy-five[
 On peut avoir plusieurs applications sur un même serveur, et heureusement 🥳
 
 Le choix de l'application avec laquelle on va discuter implique la notion de **_port_**
@@ -576,6 +577,14 @@ Le choix de l'application avec laquelle on va discuter implique la notion de **_
 Sur une machine on a 2<sup>16</sup> = 65,536
 
 .center[(mais on ne fait pas tourner autant d'applications sur un serveur)]
+]
+.twenty-five[
+<img src="static/media/address-ports-bound.svg" width="100%">
+]
+]
+
+<img src="static/media/packet-layers.svg" width="100%" style="margin-top: -30px">
+
 
 --
 
