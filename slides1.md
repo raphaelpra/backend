@@ -670,6 +670,8 @@ Clotûre en 4 étapes
 # Regardons un peu en vrai comment ca marche
 
 .center[
+le dossier `python/tcp` du cours
+<br>ou<br>
 [https://replit.com/@BasileMarchand/TcpExample?v=1](https://replit.com/@BasileMarchand/TcpExample?v=1)
 <br>ou<br>
 [http://bit.ly/3HHQ49i](http://bit.ly/3HHQ49i)
@@ -732,25 +734,35 @@ Les applications :
 
 <br><br>
 .center[Avec tcp ou udp on peut faire nos transfert de données entre application]
-<br><br>
+<br>
 .center[A votre avis c'est tout bon du coup ou on a besoin d'un truc en plus ?]
 <br><br>
 
 --
 
-🔎 Regardons sur un exemple concret 🔎
+.center[ 🔎 Regardons sur un exemple concret 🔎 ]
 
-.center[[https://replit.com/@BasileMarchand/tcpexample?v=1](https://replit.com/@BasileMarchand/tcpexample?v=1) <br> ou <br>
+.cols[
+.seventy[
+.center[
+le dossier `python/tcp-awkward-api`
+<br>ou<br>
+[https://replit.com/@BasileMarchand/tcpexample?v=1](https://replit.com/@BasileMarchand/tcpexample?v=1)
+<br>ou<br>
 [http://bit.ly/3YpoKDR](http://bit.ly/3YpoKDR)
 <br>ou<br>
-<img src="static/media/qrcode/tcp_qrcode.png" width="20%">
+]
+]
+.thirty[
+<img src="static/media/qrcode/tcp_qrcode.png" width="65%">
+]
 ]
 
 ---
 
 # Un verrou 🔒
 
-.center[Rien de standard dans mes échange de données 😵‍💫]
+.center[Rien de standard dans mes échanges de données 😵‍💫]
 <br><br><br>
 .center[J'ai créé ma propre logique <br><br><br> mais elle ne l'est <strike>peut-être</strike> certainement pas aux yeux des autres.]
 
