@@ -401,7 +401,7 @@ print("Public IP:", public_ip)
 je demande à mon OS (*)
 
 ```sh
-$ cat my-outgoing-ip.py
+$ cat my-local-ip.py
 import socket
 
 def get_outgoing_ip():
@@ -425,7 +425,7 @@ $ python my-public-ip.py
   .fifty[
   .. et ça peut être différent ! quel est ce mystère ?
 ```sh
-$ python my-outgoing-ip.py
+$ python my-local-ip.py
 *Outgoing IP: 10.1.1.15
 ```
   ]
