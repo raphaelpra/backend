@@ -472,7 +472,7 @@ les adresses privées réservées:
 Retenir les adresses IP c'est quand même pas super 🤯 !
 
 .center[
-Par exemple imaginez que vous deviez retenir `109.69.190.66` <br/>pour savoir les salles de cours .... <strike>on ne vous verrait pas souvent !</strike>
+Par exemple imaginez que vous deviez retenir `91.134.82.158` <br/>pour savoir les salles de cours .... <strike>on ne vous verrait pas souvent !</strike>
 ]
 
 .footnote[`*` c'est l'adresse IP du serveur qui héberge OASIS]
@@ -493,30 +493,30 @@ En gros c'est le service qui fait l'association entre un nom de domaine et un ad
 ```bash
 # plusieurs utilitaires pour faire des requêtes DNS
 
-$ nslookup  www.minesparis.psl.eu
+$ nslookup oasis.minesparis.psl.eu
 Server:		192.168.0.1
 Address:	192.168.0.1#53
 
 Non-authoritative answer:
-Name:	www.minesparis.psl.eu
-*Address: 109.69.190.66
+Name:	oasis.minesparis.psl.eu
+*Address: 91.134.82.158
 ```
 ]
 
 .fifty[
 
 ```bash
-$ host  www.minesparis.psl.eu
-*www.minesparis.psl.eu has address 109.69.190.66
+$ host oasis.minesparis.psl.eu
+*oasis.minesparis.psl.eu has address 91.134.82.158
 ```
 
 ```bash
-$ dig @8.8.8.8 www.minesparis.psl.eu A +noall +answer
+$ dig @8.8.8.8 oasis.minesparis.psl.eu A +noall +answer
 
-; <<>> DiG 9.10.6 <<>> @8.8.8.8 www.minesparis.psl.eu A +noall +answer
+; <<>> DiG 9.10.6 <<>> @8.8.8.8 oasis.minesparis.psl.eu A +noall +answer
 ; (1 server found)
 ;; global options: +cmd
-*www.minesparis.psl.eu.	3600	IN	A	109.69.190.66
+*oasis.minesparis.psl.eu. 161	IN	A	91.134.82.158
 ```
 
 ]
